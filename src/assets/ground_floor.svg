@@ -1,0 +1,327 @@
+<svg viewBox="0 0 1000 1325" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif" xmlns:c2pa="http://c2pa.org/manifest"><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTo4YWRiMmQwZS0yMjRiLTRiZDAtODcxZS1hZDEzZmU2Njg0YzAAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaO69/uQ/VKJPOpEhxUOda/0AAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDo0ZWIxNWZiOS1kZWM5LTRlNTEtOGI3My1lNGE0MTMwNjdjYzJscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNoTFcBby+2m189mPr8YNOZzQAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggW9qTNjXGfvcS/DkGTSxKYIMjCgeAkA9Izx9tUSoRV9ikZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaDX9udBLpWlijLdKXKkcn/YAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRNAAAAAAAAAAAAAAAAAGRoYXNoWCA7cvhf5HWUXo65YUwe46ZVKcu0BLROZoeKU41t6lISY2RuYW1lbmp1bWJmIG1hbmlmZXN0amV4Y2x1c2lvbnOBomVzdGFydBifZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjhhZGIyZDBlLTIyNGItNGJkMC04NzFlLWFkMTNmZTY2ODRjMC9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjQyZjFkMzFhLWQ0ZjQtNDA3Zi04YmZiLTc0YTdhNzAyNmJkZHJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCBb2pM2NcZ+9xL8OQZNLEpggyMKB4CQD0jPH21RKhFX2KJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggVaM9CBdI2ZCqMMOTplBgH3wKDzufwzo5wO9gREhNDtaiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggITUrAf0/fykyZR/9D5QjX7THMsoTUxjnwOxgVQKkFah0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQAiaGNhzGB2khCUVAYyMDkJlhAXH51M0OS+GB6IRnEaoZq2LO3anuuzdfLET0yUayUxmX3q4IBHLhg44TpcUVRg=</c2pa:manifest></metadata>
+  <defs>
+    <style>
+      .wall        { fill: none; stroke: #800000; stroke-width: 3; }
+      .room        { fill: #f8f9fa; stroke: #800000; stroke-width: 2; cursor: pointer; transition: fill .2s; }
+      .room:hover  { fill: #c5a059; }
+      .utility     { fill: #eef0f2; stroke: #800000; stroke-width: 1.3; cursor: pointer; }
+      .core        { fill: #800000; opacity: .88; cursor: pointer; }
+      .diamondBg   { fill: #fffdf8; stroke: #800000; stroke-width: 2.5; }
+      .label       { fill: #2b2b2b; font-size: 11px; text-anchor: middle; pointer-events: none; }
+      .label-sm    { fill: #2b2b2b; font-size: 8.5px; text-anchor: middle; pointer-events: none; }
+      .label-core  { fill: #ffffff; font-size: 8.5px; font-weight: bold; text-anchor: middle; pointer-events: none; }
+      .outline     { fill: none; stroke: #800000; stroke-width: 3.5; }
+      /* navigation graph */
+      .navEdge     { stroke: #c5a059; stroke-width: 2.5; stroke-dasharray: 6 4; fill: none; opacity: .85; }
+      .navNode     { fill: #c5a059; stroke: #800000; stroke-width: 1.2; }
+      .navNode:hover { fill: #800000; }
+      .navLabel    { fill: #6b4f1d; font-size: 7px; text-anchor: middle; pointer-events: none; }
+    </style>
+  </defs>
+
+  <!-- ============ TITLE ============ -->
+  <text x="500" y="20" text-anchor="middle" font-size="17" font-weight="bold" fill="#800000">
+    St. Francis Block — Ground Floor
+  </text>
+  <text x="500" y="34" text-anchor="middle" font-size="9" fill="#6b6b6b">
+    SJCET Palai · traced from institutional layout signage
+  </text>
+
+  <!-- ======================================================= -->
+  <!-- OUTER BUILDING OUTLINE (star / cross footprint, approx) -->
+  <!-- ======================================================= -->
+  <path class="outline" d="
+    M400,60 L600,60 L660,120 L760,120 L900,220 L820,300
+    L900,380 L780,460 L730,500 L730,600 L830,600 L830,590
+    L900,590 L900,930 L680,930 L680,600 L620,600 L620,930
+    L560,1010 L500,1060 L440,1010 L380,930 L320,930 L320,600
+    L260,600 L260,930 L100,930 L100,590 L170,590 L170,600
+    L270,600 L270,500 L220,460 L100,380 L180,300 L100,220
+    L240,120 L340,120 L400,60 Z" />
+
+  <!-- ======================================================= -->
+  <!-- TOP: STAGE (octagonal) -->
+  <!-- ======================================================= -->
+  <polygon id="stage" class="room" points="400,60 600,60 660,120 620,150 380,150 340,120" />
+  <text x="500" y="105" class="label">STAGE</text>
+
+  <!-- ======================================================= -->
+  <!-- TOP-LEFT DIAMOND WING: GD/PI cluster -->
+  <!-- ======================================================= -->
+  <polygon class="diamondBg" points="240,120 340,120 100,380 0,260" />
+  <g>
+    <rect id="room-GD-2" class="room" x="40" y="150" width="55" height="42" />
+    <text x="67" y="174" class="label-sm">GD-2</text>
+    <rect id="room-GD-3" class="room" x="95" y="140" width="55" height="42" />
+    <text x="122" y="164" class="label-sm">GD-3</text>
+    <rect id="room-008" class="room" x="78" y="185" width="52" height="38" />
+    <text x="104" y="207" class="label-sm">008</text>
+    <rect id="room-PI-4" class="room" x="150" y="172" width="45" height="38" />
+    <text x="172" y="194" class="label-sm">PI-4</text>
+    <rect id="room-PI-5" class="room" x="125" y="212" width="45" height="38" />
+    <text x="147" y="234" class="label-sm">PI-5</text>
+    <rect id="room-PI-6" class="room" x="80" y="222" width="42" height="38" />
+    <text x="101" y="244" class="label-sm">PI-6</text>
+    <rect id="room-PI-3" class="room" x="35" y="210" width="42" height="38" />
+    <text x="56" y="232" class="label-sm">PI-3</text>
+    <rect id="room-PI-2" class="room" x="48" y="250" width="42" height="38" />
+    <text x="69" y="272" class="label-sm">PI-2</text>
+    <rect id="room-PI-1" class="room" x="90" y="258" width="42" height="38" />
+    <text x="111" y="280" class="label-sm">PI-1</text>
+  </g>
+
+  <!-- ======================================================= -->
+  <!-- TOP-RIGHT DIAMOND WING: room 012 -->
+  <!-- ======================================================= -->
+  <polygon class="diamondBg" points="660,120 760,120 1000,260 900,380" />
+  <rect id="room-012" class="room" x="720" y="160" width="180" height="140" />
+  <text x="810" y="228" class="label" font-size="12">CIVIL SEMINAR</text>
+  <text x="810" y="243" class="label" font-size="12">HALL</text>
+  <text x="810" y="260" class="label-sm">012</text>
+
+  <!-- ======================================================= -->
+  <!-- SEMINAR HALL-01 / COURT / mirrored entry, with DN stairs -->
+  <!-- ======================================================= -->
+  <polygon id="room-court" class="room" points="330,240 420,290 330,340 240,290" />
+  <text x="330" y="294" class="label-sm">COURT</text>
+
+  <rect id="room-seminar-01" class="room" x="425" y="230" width="150" height="110" />
+  <text x="500" y="288" class="label">SEMINAR HALL-01</text>
+
+  <polygon class="room" points="670,240 760,290 670,340 580,290" />
+  <text x="670" y="294" class="label-sm">ENTRY</text>
+
+  <!-- diagonal DN staircases either side of seminar hall -->
+  <polygon class="utility" points="340,150 420,150 420,225 360,225" />
+  <text x="385" y="190" class="label-sm">DN</text>
+  <polygon class="utility" points="580,150 660,150 640,225 580,225" />
+  <text x="615" y="190" class="label-sm">DN</text>
+
+  <!-- ======================================================= -->
+  <!-- STORE (center) -->
+  <!-- ======================================================= -->
+  <rect id="room-store" class="room" x="425" y="345" width="150" height="70" />
+  <text x="500" y="384" class="label">STORE</text>
+
+  <!-- ======================================================= -->
+  <!-- MID-LEFT DIAMOND WING: 007 / GD-1 / 006 -->
+  <!-- ======================================================= -->
+  <polygon class="diamondBg" points="270,420 100,380 180,300 340,340" />
+  <rect id="room-007" class="room" x="115" y="335" width="140" height="55" />
+  <text x="185" y="358" class="label-sm">PLACEMENT CTRL</text>
+  <text x="185" y="371" class="label-sm">007</text>
+  <rect id="room-GD-1" class="room" x="120" y="392" width="130" height="60" />
+  <text x="185" y="425" class="label-sm">GD-1</text>
+
+  <polygon class="diamondBg" points="270,460 220,460 260,500 300,540 340,500" />
+  <rect id="room-006" class="room" x="225" y="460" width="95" height="55" />
+  <text x="272" y="484" class="label-sm">ELECTRICAL</text>
+  <text x="272" y="496" class="label-sm">CIRCUIT RM 006</text>
+
+  <!-- ======================================================= -->
+  <!-- MID-RIGHT DIAMOND WING: 013 / 014 -->
+  <!-- ======================================================= -->
+  <polygon class="diamondBg" points="730,420 900,380 820,300 660,340" />
+  <rect id="room-013" class="room" x="745" y="335" width="140" height="90" />
+  <text x="815" y="373" class="label-sm">VALUATION</text>
+  <text x="815" y="386" class="label-sm">CAMP KTU 013</text>
+
+  <polygon class="diamondBg" points="730,460 780,460 740,500 700,540 660,500" />
+  <rect id="room-014" class="room" x="680" y="460" width="90" height="50" />
+  <text x="725" y="482" class="label-sm">LADIES</text>
+  <text x="725" y="494" class="label-sm">WAITING 014</text>
+
+  <!-- ======================================================= -->
+  <!-- SACRISTY - ALTER - SACRISTY -->
+  <!-- ======================================================= -->
+  <rect id="room-sacristy-l" class="room" x="425" y="420" width="42" height="45" />
+  <text x="446" y="446" class="label-sm">SACRISTY</text>
+  <rect id="room-alter" class="room" x="467" y="420" width="66" height="45" />
+  <text x="500" y="446" class="label-sm">ALTER</text>
+  <rect id="room-sacristy-r" class="room" x="533" y="420" width="42" height="45" />
+  <text x="554" y="446" class="label-sm">SACRISTY</text>
+
+  <!-- ======================================================= -->
+  <!-- PRAYER HALL (011) -->
+  <!-- ======================================================= -->
+  <rect id="room-011" class="room" x="380" y="470" width="240" height="185" />
+  <text x="500" y="565" class="label" font-size="14">PRAYER HALL</text>
+  <text x="500" y="582" class="label-sm">011</text>
+
+  <!-- ======================================================= -->
+  <!-- LEFT UTILITY COLUMN: 005 / 004 / LIFT -->
+  <!-- ======================================================= -->
+  <rect id="room-005" class="utility" x="270" y="470" width="105" height="55" />
+  <text x="322" y="493" class="label-sm">GENTS TOILET-</text>
+  <text x="322" y="505" class="label-sm">HANDICAPPED 005</text>
+
+  <rect id="room-004" class="utility" x="270" y="527" width="105" height="60" />
+  <text x="322" y="553" class="label-sm">GENTS'</text>
+  <text x="322" y="565" class="label-sm">TOILET 004</text>
+
+  <rect id="lift-left" class="core" x="270" y="589" width="105" height="46" />
+  <text x="322" y="615" class="label-core">LIFT</text>
+
+  <!-- ======================================================= -->
+  <!-- RIGHT UTILITY COLUMN: 015 / 016 / LIFT -->
+  <!-- ======================================================= -->
+  <rect id="room-015" class="utility" x="625" y="470" width="50" height="55" />
+  <text x="650" y="490" class="label-sm">H.TOILET</text>
+  <text x="650" y="502" class="label-sm">015</text>
+
+  <rect id="room-016" class="utility" x="677" y="470" width="103" height="55" />
+  <text x="728" y="493" class="label-sm">LADIES</text>
+  <text x="728" y="505" class="label-sm">TOILET 016</text>
+
+  <rect id="lift-right" class="core" x="625" y="527" width="105" height="60" />
+  <text x="677" y="560" class="label-core">LIFT</text>
+
+  <!-- ======================================================= -->
+  <!-- GUESTS WAITING AREA + flanking stairs -->
+  <!-- ======================================================= -->
+  <rect id="guests-waiting" class="room" x="380" y="659" width="240" height="65" />
+  <text x="500" y="695" class="label">GUESTS WAITING AREA</text>
+
+  <rect id="stair-left-up" class="core" x="270" y="589" width="0" height="0" opacity="0" /> <!-- placeholder spacer -->
+  <rect id="stair-left-lower" class="core" x="170" y="659" width="100" height="65" />
+  <text x="220" y="688" class="label-core">STAIRS</text>
+  <text x="220" y="700" class="label-core">UP</text>
+
+  <rect id="stair-right-lower" class="core" x="730" y="659" width="100" height="65" />
+  <text x="780" y="688" class="label-core">STAIRS</text>
+  <text x="780" y="700" class="label-core">UP</text>
+
+  <rect id="room-store-right" class="utility" x="830" y="659" width="70" height="65" />
+  <text x="865" y="695" class="label-sm">STORE</text>
+
+  <!-- ======================================================= -->
+  <!-- CENTRAL BOOK-STORE-BELOW / MAIN STAIR CORE -->
+  <!-- ======================================================= -->
+  <rect id="stair-main-core" class="core" x="400" y="730" width="200" height="100" />
+  <text x="500" y="775" class="label-core">BOOK STORE BELOW</text>
+  <text x="500" y="790" class="label-core">MAIN STAIRS UP / DN</text>
+
+  <!-- ======================================================= -->
+  <!-- LEFT LOWER BLOCK: 003 / 002 / 001 -->
+  <!-- ======================================================= -->
+  <rect id="room-003" class="room" x="100" y="730" width="270" height="100" />
+  <text x="235" y="778" class="label" font-size="13">PLACEMENT CELL</text>
+  <text x="235" y="794" class="label-sm">003</text>
+
+  <rect id="room-002" class="room" x="100" y="830" width="270" height="100" />
+  <text x="235" y="878" class="label" font-size="13">MEDICARE</text>
+  <text x="235" y="894" class="label-sm">002</text>
+
+  <rect id="room-001" class="room" x="100" y="930" width="270" height="110" />
+  <text x="240" y="978" class="label" font-size="13">MANAGER'S ROOM</text>
+  <text x="240" y="994" class="label-sm">001</text>
+
+  <!-- small utility notches inside 001 (toilet / drying / shower / GD room) -->
+  <rect id="room-001-toilet-1" class="utility" x="107" y="936" width="42" height="30" />
+  <text x="128" y="954" class="label-sm">TOILET</text>
+  <rect id="room-001-toilet-2" class="utility" x="107" y="970" width="42" height="30" />
+  <text x="128" y="988" class="label-sm">TOILET</text>
+  <rect id="room-001-drying" class="utility" x="107" y="1003" width="55" height="30" />
+  <text x="134" y="1021" class="label-sm">DRYING SPACE</text>
+  <rect id="room-001-shower" class="utility" x="153" y="936" width="60" height="30" />
+  <text x="183" y="954" class="label-sm">SHOWER / WM</text>
+  <rect id="room-001-gd" class="utility" x="167" y="1003" width="90" height="30" />
+  <text x="212" y="1021" class="label-sm">GD ROOM</text>
+
+  <!-- ======================================================= -->
+  <!-- RIGHT LOWER BLOCK: 017 / pantry / 018 / L-WASH / G-WASH -->
+  <!-- ======================================================= -->
+  <rect id="room-017" class="room" x="630" y="730" width="150" height="65" />
+  <text x="705" y="756" class="label-sm">VIP DINING</text>
+  <text x="705" y="768" class="label-sm">017</text>
+
+  <rect id="room-pantry" class="utility" x="782" y="730" width="118" height="45" />
+  <text x="841" y="756" class="label-sm">PANTRY</text>
+
+  <rect id="room-counter" class="utility" x="630" y="797" width="90" height="33" />
+  <text x="675" y="817" class="label-sm">COUNTER</text>
+
+  <rect id="room-018" class="room" x="630" y="832" width="270" height="205" />
+  <text x="765" y="925" class="label" font-size="14">CANTEEN /</text>
+  <text x="765" y="942" class="label" font-size="14">BOOK STORE</text>
+  <text x="765" y="958" class="label-sm">018</text>
+
+  <rect id="room-lwash" class="utility" x="700" y="1042" width="90" height="42" />
+  <text x="745" y="1067" class="label-sm">L. WASH</text>
+  <rect id="room-gwash" class="utility" x="792" y="1042" width="90" height="42" />
+  <text x="837" y="1067" class="label-sm">G. WASH</text>
+
+  <!-- ======================================================= -->
+  <!-- PORCH (bottom fan / apex) -->
+  <!-- ======================================================= -->
+  <path id="porch" class="room" d="M420,1040 L580,1040 L560,1090 Q500,1140 440,1090 Z" />
+  <text x="500" y="1085" class="label">PORCH</text>
+  <text x="500" y="1100" class="label-sm">MAIN ENTRANCE</text>
+
+  <!-- ======================================================= -->
+  <!-- NAVIGATION GRAPH (doorway / junction nodes for pathfinding) -->
+  <!-- ======================================================= -->
+  <g id="nav-graph">
+    <!-- corridor spine edges -->
+    <path class="navEdge" d="M500,1090 L500,830 L500,730 L500,660 L500,470 L500,415 L500,345 L500,290 L500,150 L500,105" />
+    <!-- left wing branches -->
+    <path class="navEdge" d="M500,730 L370,730 L235,730 L235,830 L235,930 L235,985" />
+    <path class="navEdge" d="M500,660 L322,660 L322,587 L322,525" />
+    <path class="navEdge" d="M500,415 L330,340 L185,363" />
+    <path class="navEdge" d="M500,290 L330,290 L200,215" />
+    <!-- right wing branches -->
+    <path class="navEdge" d="M500,730 L630,730 L765,730 L765,832 L765,930" />
+    <path class="navEdge" d="M500,660 L677,660 L677,587 L677,525" />
+    <path class="navEdge" d="M500,415 L670,340 L815,363" />
+    <path class="navEdge" d="M500,290 L670,290 L810,215" />
+    <!-- stairs / core connectors -->
+    <path class="navEdge" d="M500,690 L270,690 L220,690" />
+    <path class="navEdge" d="M500,690 L730,690 L780,690" />
+
+    <!-- nodes -->
+    <circle class="navNode" cx="500" cy="1090" r="7" id="node-entrance" />
+    <text x="500" y="1112" class="navLabel">ENTRY</text>
+
+    <circle class="navNode" cx="500" cy="785" r="6" id="node-main-stair" />
+    <text x="500" y="805" class="navLabel">STAIR CORE</text>
+
+    <circle class="navNode" cx="500" cy="690" r="6" id="node-guests-waiting" />
+    <circle class="navNode" cx="500" cy="562" r="6" id="node-prayer-hall" />
+    <circle class="navNode" cx="500" cy="384" r="6" id="node-store" />
+    <circle class="navNode" cx="500" cy="290" r="6" id="node-seminar-hall" />
+    <circle class="navNode" cx="500" cy="105" r="6" id="node-stage" />
+
+    <circle class="navNode" cx="235" cy="985" r="5" id="node-room-001" />
+    <circle class="navNode" cx="235" cy="830" r="5" id="node-room-002" />
+    <circle class="navNode" cx="235" cy="730" r="5" id="node-room-003" />
+    <circle class="navNode" cx="322" cy="525" r="5" id="node-lift-left" />
+    <circle class="navNode" cx="220" cy="690" r="5" id="node-stair-left" />
+    <circle class="navNode" cx="185" cy="363" r="5" id="node-room-007" />
+    <circle class="navNode" cx="200" cy="215" r="5" id="node-gd-pi-cluster" />
+
+    <circle class="navNode" cx="765" cy="930" r="5" id="node-room-018" />
+    <circle class="navNode" cx="765" cy="832" r="5" id="node-room-017" />
+    <circle class="navNode" cx="677" cy="525" r="5" id="node-lift-right" />
+    <circle class="navNode" cx="780" cy="690" r="5" id="node-stair-right" />
+    <circle class="navNode" cx="815" cy="363" r="5" id="node-room-013" />
+    <circle class="navNode" cx="810" cy="215" r="5" id="node-room-012" />
+  </g>
+
+  <!-- ============ LEGEND ============ -->
+  <g id="legend" transform="translate(40, 1150)">
+    <rect x="0" y="0" width="14" height="14" class="room" />
+    <text x="20" y="11" class="label-sm" text-anchor="start">Room</text>
+
+    <rect x="0" y="20" width="14" height="14" class="utility" />
+    <text x="20" y="31" class="label-sm" text-anchor="start">Restroom / Utility</text>
+
+    <rect x="0" y="40" width="14" height="14" class="core" />
+    <text x="20" y="51" class="label-sm" text-anchor="start">Stair / Lift core</text>
+
+    <line x1="0" y1="66" x2="14" y2="66" class="navEdge" />
+    <text x="20" y="70" class="label-sm" text-anchor="start">Nav. path</text>
+
+    <circle cx="7" cy="86" r="5" class="navNode" />
+    <text x="20" y="90" class="label-sm" text-anchor="start">Nav. node</text>
+  </g>
+</svg>
