@@ -11,20 +11,25 @@ export default function SearchBar({ placeholder, initialValue, onSelect, onClear
     setQuery(initialValue || '');
   }, [initialValue]);
 
-  // Extract searchable locations
-  const searchItems = [];
-  if (graphData) {
-    Object.keys(graphData).forEach(floor => {
-      Object.keys(graphData[floor].nodes).forEach(nodeId => {
-        searchItems.push({
-          id: nodeId,
-          name: graphData[floor].nodes[nodeId].name,
-          floor: floor,
-          floorLabel: floor === 'ground' ? 'Ground Floor' : floor.charAt(0).toUpperCase() + floor.slice(1) + ' Floor'
+  // Extract searchable locations safely
+  const searchItems = React.useMemo(() => {
+    const items = [];
+    if (graphData) {
+      Object.keys(graphData).forEach(floor => {
+        Object.keys(graphData[floor].nodes).forEach(nodeId => {
+          const nodeName = graphData[floor].nodes[nodeId].name;
+          // Skip utility/hidden nodes if they don't have a formal name, or fallback to ID
+          items.push({
+            id: nodeId,
+            name: nodeName || nodeId.replace('room-', '').replace(/-/g, ' ').toUpperCase(),
+            floor: floor,
+            floorLabel: floor === 'ground' ? 'Ground Floor' : floor.charAt(0).toUpperCase() + floor.slice(1) + ' Floor'
+          });
         });
       });
-    });
-  }
+    }
+    return items;
+  }, [graphData]);
 
   useEffect(() => {
     if (query.trim() === '' || query === initialValue) {
@@ -33,11 +38,11 @@ export default function SearchBar({ placeholder, initialValue, onSelect, onClear
     }
     const lowerQuery = query.toLowerCase();
     const filtered = searchItems.filter(item => 
-      item.name.toLowerCase().includes(lowerQuery) || 
-      item.id.toLowerCase().includes(lowerQuery)
+      (item.name || '').toLowerCase().includes(lowerQuery) || 
+      (item.id || '').toLowerCase().includes(lowerQuery)
     );
     setResults(filtered);
-  }, [query, initialValue]);
+  }, [query, initialValue, searchItems]);
 
   // Handle outside click to close dropdown
   useEffect(() => {
