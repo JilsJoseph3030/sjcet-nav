@@ -83,27 +83,3 @@ BEGIN
 END;
 $$;
 
--- =====================================================================
--- Example Data Seeding (Converting graph.json into SQL inserts)
--- =====================================================================
-INSERT INTO floors (id, name, level_index) VALUES 
-('ground', 'Ground Floor', 0),
-('first', 'First Floor', 1),
-('second', 'Second Floor', 2),
-('third', 'Third Floor', 3),
-('fourth', 'Fourth Floor', 4);
-
--- Insert Ground Floor Nodes
-INSERT INTO nodes (id, floor_id, name, type, geom) VALUES
-('entrance', 'ground', 'Main Entrance', 'entrance', ST_MakePoint(500, 1090)),
-('stair-main-core', 'ground', 'Main Staircase', 'stair-core', ST_MakePoint(500, 785)),
-('room-001', 'ground', 'Manager''s Room 001', 'room', ST_MakePoint(235, 985));
-
--- Insert Ground Floor Edges
-INSERT INTO edges (from_node_id, from_floor_id, to_node_id, to_floor_id, weight) VALUES
-('entrance', 'ground', 'stair-main-core', 'ground', 305),
-('entrance', 'ground', 'room-001', 'ground', 280);
-
--- Insert Inter-Floor Stair Connection
-INSERT INTO edges (from_node_id, from_floor_id, to_node_id, to_floor_id, weight) VALUES
-('stair-main-core', 'ground', 'stair-main-core', 'first', 1000);
