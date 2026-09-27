@@ -2,10 +2,16 @@ import React, { useEffect, useRef } from 'react';
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 import groundFloorUrl from '../assets/ground_floor.svg?raw';
 import firstFloorUrl from '../assets/first_floor.svg?raw';
+import secondFloorUrl from '../assets/second_floor.svg?raw';
+import thirdFloorUrl from '../assets/third_floor.svg?raw';
+import fourthFloorUrl from '../assets/fourth_floor.svg?raw';
 
 const maps = {
   ground: groundFloorUrl,
-  first: firstFloorUrl
+  first: firstFloorUrl,
+  second: secondFloorUrl,
+  third: thirdFloorUrl,
+  fourth: fourthFloorUrl
 };
 
 export default function FloorMap({ floor, onRoomSelect, selectedRoom, isNavigating, currentRoute }) {

@@ -153,19 +153,16 @@ function App() {
             <h1 className="text-lg font-bold tracking-tight">SJCET Indoor Nav</h1>
           </div>
           {/* Mobile Floor Switcher */}
-          <div className="flex bg-white/10 rounded-lg overflow-hidden border border-white/20 text-xs">
-            <button 
-              onClick={() => setActiveFloor('ground')}
-              className={`px-3 py-1.5 font-bold transition-colors ${activeFloor === 'ground' ? 'bg-sjcet-gold text-sjcet-maroon' : 'text-white hover:bg-white/10'}`}
-            >
-              Ground
-            </button>
-            <button 
-              onClick={() => setActiveFloor('first')}
-              className={`px-3 py-1.5 font-bold transition-colors ${activeFloor === 'first' ? 'bg-sjcet-gold text-sjcet-maroon' : 'text-white hover:bg-white/10'}`}
-            >
-              First
-            </button>
+          <div className="flex bg-white/10 rounded-lg overflow-x-auto border border-white/20 text-xs hide-scrollbar max-w-[50%]">
+            {['ground', 'first', 'second', 'third', 'fourth'].map((f) => (
+              <button 
+                key={f}
+                onClick={() => setActiveFloor(f)}
+                className={`px-3 py-1.5 font-bold transition-colors whitespace-nowrap ${activeFloor === f ? 'bg-sjcet-gold text-sjcet-maroon' : 'text-white hover:bg-white/10'}`}
+              >
+                {f.charAt(0).toUpperCase() + f.slice(1)}
+              </button>
+            ))}
           </div>
         </header>
       </div>

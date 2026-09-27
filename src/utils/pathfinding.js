@@ -101,6 +101,11 @@ export function computeShortestPath(startNodeId, startFloor, targetNodeId, targe
   const instructions = [];
   let currentFloor = startFloor;
   
+  const capitalizeFloor = (floorStr) => {
+    if (floorStr === 'ground') return 'Ground Floor';
+    return floorStr.charAt(0).toUpperCase() + floorStr.slice(1) + ' Floor';
+  };
+
   if (path.length <= 1) {
     instructions.push("You are already at your destination.");
   } else {
@@ -109,11 +114,11 @@ export function computeShortestPath(startNodeId, startFloor, targetNodeId, targe
       const toNode = unifiedNodes[path[i+1]];
       
       if (fromNode.floor !== toNode.floor) {
-        instructions.push(`Take the ${fromNode.name} to the ${toNode.floor === 'ground' ? 'Ground' : 'First'} Floor.`);
+        instructions.push(`Take the ${fromNode.name} up/down to the ${capitalizeFloor(toNode.floor)}.`);
         currentFloor = toNode.floor;
       }
     }
-    instructions.push(`Proceed to ${unifiedNodes[targetGlobalId].name}.`);
+    instructions.push(`Proceed to ${unifiedNodes[targetGlobalId].name} on the ${capitalizeFloor(targetFloor)}.`);
   }
 
   return {
