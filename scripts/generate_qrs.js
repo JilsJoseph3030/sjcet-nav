@@ -30,7 +30,7 @@ function getWiFiIpAddress() {
 
 const localIp = getWiFiIpAddress();
 // Use the original qr_codes folder so we overwrite them!
-const BASE_URL = `http://${localIp}:5173/`;
+const BASE_URL = `https://sjcet-nav.vercel.app/`;
 const OUTPUT_DIR = './qr_codes';
 
 console.log(`Using base URL: ${BASE_URL}`);
@@ -38,10 +38,10 @@ console.log(`Using base URL: ${BASE_URL}`);
 const graphData = {
   ground: [
     { id: 'entrance', name: 'Main Entrance Checkpoint' },
-    { id: 'stair-core', name: 'Ground Floor Main Stair Checkpoint' }
+    { id: 'stair-main-core', name: 'Ground Floor Main Stair Checkpoint' }
   ],
   first: [
-    { id: 'stair-main-void', name: 'First Floor Main Stair Checkpoint' },
+    { id: 'stair-main-core', name: 'First Floor Main Stair Checkpoint' },
     { id: 'stair-left', name: 'First Floor Left Stair Checkpoint' },
     { id: 'stair-right', name: 'First Floor Right Stair Checkpoint' }
   ]

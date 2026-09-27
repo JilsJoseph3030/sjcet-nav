@@ -51,11 +51,11 @@
   <!-- TOP-LEFT DIAMOND WING: Lecture Hall-II (108, upper) / Lecture Hall-I (107, lower) -->
   <!-- ======================================================= -->
   <polygon class="diamondBg" points="240,120 340,120 100,380 0,260" />
-  <rect id="room-108" class="room" x="30" y="150" width="150" height="120" />
+  <rect id="room-208" class="room" x="30" y="150" width="150" height="120" />
   <text x="105" y="205" class="label">LECTURE HALL-II</text>
   <text x="105" y="220" class="label-sm">108</text>
 
-  <rect id="room-107" class="room" x="20" y="270" width="150" height="115" />
+  <rect id="room-207" class="room" x="20" y="270" width="150" height="115" />
   <text x="95" y="322" class="label">LECTURE HALL-I</text>
   <text x="95" y="337" class="label-sm">107</text>
 
@@ -63,11 +63,11 @@
   <!-- TOP-RIGHT DIAMOND WING: Lecture Hall-III (109, upper) / Lecture Hall-IV (110, lower) -->
   <!-- ======================================================= -->
   <polygon class="diamondBg" points="660,120 760,120 1000,260 900,380" />
-  <rect id="room-109" class="room" x="820" y="150" width="150" height="120" />
+  <rect id="room-209" class="room" x="820" y="150" width="150" height="120" />
   <text x="895" y="205" class="label">LECTURE HALL-III</text>
   <text x="895" y="220" class="label-sm">109</text>
 
-  <rect id="room-110" class="room" x="830" y="270" width="150" height="115" />
+  <rect id="room-210" class="room" x="830" y="270" width="150" height="115" />
   <text x="905" y="322" class="label">LECTURE HALL-IV</text>
   <text x="905" y="337" class="label-sm">110</text>
 
@@ -100,7 +100,7 @@
   <!-- MID-LEFT DIAMOND: Gents' Waiting Room (106) -->
   <!-- ======================================================= -->
   <polygon class="diamondBg" points="270,460 220,460 260,500 300,540 340,500" />
-  <rect id="room-106" class="room" x="225" y="460" width="95" height="55" />
+  <rect id="room-206" class="room" x="225" y="460" width="95" height="55" />
   <text x="272" y="484" class="label-sm">GENTS'</text>
   <text x="272" y="496" class="label-sm">WAITING RM 106</text>
 
@@ -108,18 +108,18 @@
   <!-- MID-RIGHT DIAMOND: Ladies Waiting Room (111) -->
   <!-- ======================================================= -->
   <polygon class="diamondBg" points="730,460 780,460 740,500 700,540 660,500" />
-  <rect id="room-111" class="room" x="680" y="460" width="90" height="50" />
+  <rect id="room-211" class="room" x="680" y="460" width="90" height="50" />
   <text x="725" y="482" class="label-sm">LADIES</text>
   <text x="725" y="494" class="label-sm">WAITING 111</text>
 
   <!-- ======================================================= -->
   <!-- LEFT UTILITY COLUMN: 105 (Handicapped) / 104 (Gents) / LIFT -->
   <!-- ======================================================= -->
-  <rect id="room-105" class="utility" x="270" y="470" width="105" height="55" />
+  <rect id="room-205" class="utility" x="270" y="470" width="105" height="55" />
   <text x="322" y="493" class="label-sm">GENTS TOILET-</text>
   <text x="322" y="505" class="label-sm">HANDICAPPED 105</text>
 
-  <rect id="room-104" class="utility" x="270" y="527" width="105" height="60" />
+  <rect id="room-204" class="utility" x="270" y="527" width="105" height="60" />
   <text x="322" y="553" class="label-sm">GENTS'</text>
   <text x="322" y="565" class="label-sm">TOILET 104</text>
 
@@ -129,11 +129,11 @@
   <!-- ======================================================= -->
   <!-- RIGHT UTILITY COLUMN: 112 (Handicapped) / 113 (Ladies) / LIFT -->
   <!-- ======================================================= -->
-  <rect id="room-112" class="utility" x="625" y="470" width="50" height="55" />
+  <rect id="room-212" class="utility" x="625" y="470" width="50" height="55" />
   <text x="650" y="490" class="label-sm">L.TOILET</text>
   <text x="650" y="502" class="label-sm">(H'CAP) 112</text>
 
-  <rect id="room-113" class="utility" x="677" y="470" width="103" height="55" />
+  <rect id="room-213" class="utility" x="677" y="470" width="103" height="55" />
   <text x="728" y="493" class="label-sm">LADIES</text>
   <text x="728" y="505" class="label-sm">TOILET 113</text>
 
@@ -182,33 +182,33 @@
   <!-- ======================================================= -->
   <!-- LEFT LOWER BLOCK: 103 Library / 102 Tutorial-2 / 101 Tutorial-1 -->
   <!-- ======================================================= -->
-  <rect id="room-103" class="room" x="100" y="730" width="270" height="100" />
+  <rect id="room-203" class="room" x="100" y="730" width="270" height="100" />
   <text x="235" y="778" class="label" font-size="13">LIBRARY</text>
   <text x="235" y="794" class="label-sm">103</text>
 
-  <rect id="room-102" class="room" x="100" y="830" width="270" height="100" />
+  <rect id="room-202" class="room" x="100" y="830" width="270" height="100" />
   <text x="235" y="878" class="label" font-size="13">TUTORIAL ROOM-2</text>
   <text x="235" y="894" class="label-sm">102</text>
 
-  <rect id="room-101" class="room" x="100" y="930" width="270" height="110" />
+  <rect id="room-201" class="room" x="100" y="930" width="270" height="110" />
   <text x="235" y="982" class="label" font-size="13">TUTORIAL ROOM-1</text>
   <text x="235" y="998" class="label-sm">101</text>
 
   <!-- ======================================================= -->
   <!-- RIGHT LOWER BLOCK: 117 MCA Computer Lab / 114 Faculty Room / 115 HOD Room -->
   <!-- ======================================================= -->
-  <rect id="room-117" class="room" x="630" y="730" width="110" height="310" />
+  <rect id="room-217" class="room" x="630" y="730" width="110" height="310" />
   <text x="685" y="880" class="label" font-size="12" transform="rotate(-90 685 880)">MCA COMPUTER LAB</text>
   <text x="685" y="893" class="label-sm" transform="rotate(-90 685 893)">117</text>
 
-  <rect id="room-114" class="room" x="770" y="730" width="130" height="140" />
+  <rect id="room-214" class="room" x="770" y="730" width="130" height="140" />
   <text x="835" y="795" class="label">FACULTY ROOM</text>
   <text x="835" y="810" class="label-sm">114</text>
 
-  <rect id="room-114-nook" class="utility" x="800" y="850" width="70" height="35" />
+  <rect id="room-214-nook" class="utility" x="800" y="850" width="70" height="35" />
   <text x="835" y="871" class="label-sm">PANTRY / WASH</text>
 
-  <rect id="room-115" class="room" x="770" y="900" width="130" height="140" />
+  <rect id="room-215" class="room" x="770" y="900" width="130" height="140" />
   <text x="835" y="965" class="label">DEPT. HEAD</text>
   <text x="835" y="980" class="label-sm">(HOD ROOM) 115</text>
 
@@ -254,23 +254,23 @@
     <circle class="navNode" cx="500" cy="290" r="6" id="node-seminar-void" />
     <circle class="navNode" cx="500" cy="100" r="6" id="node-stage-void" />
 
-    <circle class="navNode" cx="235" cy="985" r="5" id="node-room-101" />
-    <circle class="navNode" cx="235" cy="830" r="5" id="node-room-102" />
-    <circle class="navNode" cx="235" cy="730" r="5" id="node-room-103" />
+    <circle class="navNode" cx="235" cy="985" r="5" id="node-room-201" />
+    <circle class="navNode" cx="235" cy="830" r="5" id="node-room-202" />
+    <circle class="navNode" cx="235" cy="730" r="5" id="node-room-203" />
     <circle class="navNode" cx="322" cy="525" r="5" id="node-lift-left" />
     <circle class="navNode" cx="220" cy="690" r="5" id="node-stair-left" />
-    <circle class="navNode" cx="272" cy="484" r="5" id="node-room-106" />
-    <circle class="navNode" cx="105" cy="205" r="5" id="node-room-108" />
-    <circle class="navNode" cx="95" cy="322" r="5" id="node-room-107" />
+    <circle class="navNode" cx="272" cy="484" r="5" id="node-room-206" />
+    <circle class="navNode" cx="105" cy="205" r="5" id="node-room-208" />
+    <circle class="navNode" cx="95" cy="322" r="5" id="node-room-207" />
 
-    <circle class="navNode" cx="685" cy="880" r="5" id="node-room-117" />
-    <circle class="navNode" cx="835" cy="795" r="5" id="node-room-114" />
-    <circle class="navNode" cx="835" cy="965" r="5" id="node-room-115" />
+    <circle class="navNode" cx="685" cy="880" r="5" id="node-room-217" />
+    <circle class="navNode" cx="835" cy="795" r="5" id="node-room-214" />
+    <circle class="navNode" cx="835" cy="965" r="5" id="node-room-215" />
     <circle class="navNode" cx="677" cy="525" r="5" id="node-lift-right" />
     <circle class="navNode" cx="780" cy="690" r="5" id="node-stair-right" />
-    <circle class="navNode" cx="725" cy="484" r="5" id="node-room-111" />
-    <circle class="navNode" cx="895" cy="205" r="5" id="node-room-109" />
-    <circle class="navNode" cx="905" cy="322" r="5" id="node-room-110" />
+    <circle class="navNode" cx="725" cy="484" r="5" id="node-room-211" />
+    <circle class="navNode" cx="895" cy="205" r="5" id="node-room-209" />
+    <circle class="navNode" cx="905" cy="322" r="5" id="node-room-210" />
   </g>
 
   <!-- ============ LEGEND ============ -->

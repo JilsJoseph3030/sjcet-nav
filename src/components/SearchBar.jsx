@@ -1,8 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Search, X, MapPin } from 'lucide-react';
-import graphData from '../utils/graph.json';
 
-export default function SearchBar({ placeholder, initialValue, onSelect, onClear, icon: Icon = Search }) {
+export default function SearchBar({ placeholder, initialValue, onSelect, onClear, icon: Icon = Search, graphData }) {
   const [query, setQuery] = useState(initialValue || '');
   const [results, setResults] = useState([]);
   const [isFocused, setIsFocused] = useState(false);
@@ -14,16 +13,18 @@ export default function SearchBar({ placeholder, initialValue, onSelect, onClear
 
   // Extract searchable locations
   const searchItems = [];
-  Object.keys(graphData).forEach(floor => {
-    Object.keys(graphData[floor].nodes).forEach(nodeId => {
-      searchItems.push({
-        id: nodeId,
-        name: graphData[floor].nodes[nodeId].name,
-        floor: floor,
-        floorLabel: floor === 'ground' ? 'Ground Floor' : 'First Floor'
+  if (graphData) {
+    Object.keys(graphData).forEach(floor => {
+      Object.keys(graphData[floor].nodes).forEach(nodeId => {
+        searchItems.push({
+          id: nodeId,
+          name: graphData[floor].nodes[nodeId].name,
+          floor: floor,
+          floorLabel: floor === 'ground' ? 'Ground Floor' : floor.charAt(0).toUpperCase() + floor.slice(1) + ' Floor'
+        });
       });
     });
-  });
+  }
 
   useEffect(() => {
     if (query.trim() === '' || query === initialValue) {

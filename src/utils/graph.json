@@ -2,29 +2,68 @@
   "ground": {
     "nodes": {
       "entrance": { "x": 500, "y": 1090, "name": "Main Entrance" },
-      "stair-core": { "x": 500, "y": 785, "name": "Main Staircase", "connections": ["first_stair-main-void"] },
+      "stair-main-core": { "x": 500, "y": 785, "name": "Main Staircase", "connections": ["first_stair-main-core"] },
       "room-001": { "x": 235, "y": 985, "name": "Manager's Room 001" },
       "room-011": { "x": 380, "y": 562, "name": "Prayer Hall 011" },
       "room-018": { "x": 765, "y": 930, "name": "Canteen 018" }
     },
     "edges": [
-      { "from": "entrance", "to": "stair-core", "weight": 305 },
+      { "from": "entrance", "to": "stair-main-core", "weight": 305 },
       { "from": "entrance", "to": "room-001", "weight": 280 },
       { "from": "entrance", "to": "room-018", "weight": 310 },
-      { "from": "stair-core", "to": "room-011", "weight": 250 }
+      { "from": "stair-main-core", "to": "room-011", "weight": 250 }
     ]
   },
   "first": {
     "nodes": {
-      "stair-main-void": { "x": 500, "y": 785, "name": "Main Staircase (1st Fl)", "connections": ["ground_stair-core"] },
+      "stair-main-core": { "x": 500, "y": 785, "name": "Main Staircase (1st Fl)", "connections": ["ground_stair-main-core", "second_stair-main-core"] },
       "room-101": { "x": 235, "y": 985, "name": "Tutorial Room 101" },
       "room-108": { "x": 105, "y": 205, "name": "Lecture Hall 108" },
       "room-117": { "x": 685, "y": 880, "name": "MCA Lab 117" }
     },
     "edges": [
-      { "from": "stair-main-void", "to": "room-101", "weight": 330 },
-      { "from": "stair-main-void", "to": "room-108", "weight": 700 },
-      { "from": "stair-main-void", "to": "room-117", "weight": 200 }
+      { "from": "stair-main-core", "to": "room-101", "weight": 330 },
+      { "from": "stair-main-core", "to": "room-108", "weight": 700 },
+      { "from": "stair-main-core", "to": "room-117", "weight": 200 }
+    ]
+  },
+  "second": {
+    "nodes": {
+      "stair-main-core": { "x": 500, "y": 785, "name": "Main Staircase (2nd Fl)", "connections": ["first_stair-main-core", "third_stair-main-core"] },
+      "room-201": { "x": 235, "y": 985, "name": "Tutorial Room 201" },
+      "room-208": { "x": 105, "y": 205, "name": "Lecture Hall 208" },
+      "room-217": { "x": 685, "y": 880, "name": "Software Lab 217" }
+    },
+    "edges": [
+      { "from": "stair-main-core", "to": "room-201", "weight": 330 },
+      { "from": "stair-main-core", "to": "room-208", "weight": 700 },
+      { "from": "stair-main-core", "to": "room-217", "weight": 200 }
+    ]
+  },
+  "third": {
+    "nodes": {
+      "stair-main-core": { "x": 500, "y": 785, "name": "Main Staircase (3rd Fl)", "connections": ["second_stair-main-core", "fourth_stair-main-core"] },
+      "room-301": { "x": 235, "y": 985, "name": "HOD Cabin 301" },
+      "room-308": { "x": 105, "y": 205, "name": "Seminar Hall 308" },
+      "room-317": { "x": 685, "y": 880, "name": "Hardware Lab 317" }
+    },
+    "edges": [
+      { "from": "stair-main-core", "to": "room-301", "weight": 330 },
+      { "from": "stair-main-core", "to": "room-308", "weight": 700 },
+      { "from": "stair-main-core", "to": "room-317", "weight": 200 }
+    ]
+  },
+  "fourth": {
+    "nodes": {
+      "stair-main-core": { "x": 500, "y": 785, "name": "Main Staircase (4th Fl)", "connections": ["third_stair-main-core"] },
+      "room-401": { "x": 235, "y": 985, "name": "Faculty Room 401" },
+      "room-408": { "x": 105, "y": 205, "name": "Lecture Hall 408" },
+      "room-417": { "x": 685, "y": 880, "name": "Project Lab 417" }
+    },
+    "edges": [
+      { "from": "stair-main-core", "to": "room-401", "weight": 330 },
+      { "from": "stair-main-core", "to": "room-408", "weight": 700 },
+      { "from": "stair-main-core", "to": "room-417", "weight": 200 }
     ]
   }
 }
