@@ -117,7 +117,15 @@ export function computeShortestPath(startNodeId, startFloor, targetNodeId, targe
   }
 
   return {
-    pathNodes: path.map(p => p.split('_')[1]),
+    pathNodes: path.map(p => {
+      const id = p.split('_')[1];
+      return {
+        id,
+        floor: unifiedNodes[p].floor,
+        x: unifiedNodes[p].x,
+        y: unifiedNodes[p].y
+      };
+    }),
     instructions: instructions
   };
 }
