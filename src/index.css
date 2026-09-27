@@ -19,12 +19,14 @@
 }
 
 .active-nav-path {
-  stroke: #800000 !important;
-  stroke-width: 4 !important;
-  stroke-dasharray: 12 12 !important;
+  stroke: #c5a059 !important;
+  stroke-width: 6 !important;
+  stroke-linecap: round !important;
+  stroke-linejoin: round !important;
+  stroke-dasharray: 8 4 !important;
   animation: march 0.8s linear infinite;
   opacity: 1 !important;
-  filter: drop-shadow(0 0 2px #c5a059);
+  filter: drop-shadow(0 0 3px rgba(197, 160, 89, 0.6));
 }
 
 @keyframes march {

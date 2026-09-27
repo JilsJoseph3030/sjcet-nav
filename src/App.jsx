@@ -1,15 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import { MapPin, Navigation, Info, X, ArrowUpCircle, Map } from 'lucide-react';
+import { MapPin, Navigation, Info, X, ArrowUpCircle, Map, Search, ArrowDownUp } from 'lucide-react';
 import FloorMap from './components/FloorMap';
+import SearchBar from './components/SearchBar';
 import { computeShortestPath } from './utils/pathfinding';
 import { usePDR } from './utils/usePDR';
 import { useGeolocation } from './utils/useGeolocation';
+import graphData from './utils/graph.json';
 
 function App() {
   const [selectedRoom, setSelectedRoom] = useState(null);
   const [activeFloor, setActiveFloor] = useState('ground');
   const [isNavigating, setIsNavigating] = useState(false);
   const [sheetExpanded, setSheetExpanded] = useState(true);
+  const [currentRoute, setCurrentRoute] = useState(null);
   
   // Phase 4: QR Code & URL State Handling (Anchor injection)
   const [startNode, setStartNode] = useState('entrance');
@@ -45,16 +48,36 @@ function App() {
     setSheetExpanded(true);
   };
 
-  const startNavigation = () => {
+  const startNavigation = (fromId = startNode, fromFloor = startFloorAnchor, toId = selectedRoom, toFloor = activeFloor) => {
+    if (!fromId || !toId) return;
+
     setIsNavigating(true);
     setSheetExpanded(false);
     
     // Phase 2: Compute route utilizing A* Engine
-    const route = computeShortestPath(startNode, startFloorAnchor, selectedRoom, activeFloor);
+    const route = computeShortestPath(fromId, fromFloor, toId, toFloor);
     if (route && route.instructions.length > 0) {
       setNavInstructions(route.instructions);
+      setCurrentRoute(route);
     } else {
       setNavInstructions(['Head towards your destination.']);
+      setCurrentRoute(null);
+    }
+  };
+
+  const handleSwap = () => {
+    if (!selectedRoom) return; 
+    const tempNode = startNode;
+    const tempFloor = startFloorAnchor;
+    
+    setStartNode(selectedRoom);
+    setStartFloorAnchor(activeFloor);
+    
+    setSelectedRoom(tempNode);
+    setActiveFloor(tempFloor);
+
+    if (isNavigating) {
+      startNavigation(selectedRoom, activeFloor, tempNode, tempFloor);
     }
   };
 
@@ -63,11 +86,13 @@ function App() {
     setSelectedRoom(null);
     setSheetExpanded(true);
     setNavInstructions([]);
+    setCurrentRoute(null);
   };
 
-  const getRoomName = (id) => {
+  const getRoomName = (id, floor) => {
     if (!id) return '';
-    return id.replace('room-', '').toUpperCase().replace(/-/g, ' ');
+    const node = graphData[floor]?.nodes[id];
+    return node ? node.name : id.replace('room-', '').toUpperCase().replace(/-/g, ' ');
   };
 
   return (
@@ -107,7 +132,7 @@ function App() {
               />
             </div>
             <div>
-              <p className="text-xl font-bold leading-tight">Head to {getRoomName(selectedRoom)}</p>
+              <p className="text-xl font-bold leading-tight">Head to {getRoomName(selectedRoom, activeFloor)}</p>
               <p className="text-sm text-sjcet-gold font-medium mt-0.5 flex items-center">
                 {navInstructions[0] || 'Follow the highlighted path'}
                 <span className="ml-2 px-2 py-0.5 bg-black/20 rounded-full text-[10px]">{steps} steps</span>
@@ -152,6 +177,7 @@ function App() {
           onRoomSelect={handleRoomSelect} 
           selectedRoom={selectedRoom}
           isNavigating={isNavigating}
+          currentRoute={currentRoute}
         />
         
         {/* QR Anchor Debug Badge */}
@@ -171,21 +197,57 @@ function App() {
           <div className="w-12 h-1.5 bg-gray-300 rounded-full"></div>
         </div>
 
-        <div className="px-6 pb-8 pt-2 flex flex-col max-h-[45vh] overflow-y-auto">
+        <div className="px-6 pb-8 pt-2 flex flex-col max-h-[55vh] overflow-y-visible">
+          {!isNavigating && (
+            <div className="relative flex flex-col mb-4">
+              <SearchBar 
+                placeholder="Choose starting point..."
+                initialValue={startNode ? getRoomName(startNode, startFloorAnchor) : ''}
+                icon={MapPin}
+                onSelect={(id, floor) => {
+                  setStartNode(id);
+                  setStartFloorAnchor(floor);
+                }}
+              />
+              
+              <div className="absolute left-[26px] top-[50%] -translate-y-[50%] h-6 w-0.5 bg-gray-300 z-0"></div>
+              
+              <button 
+                onClick={handleSwap}
+                className="absolute right-4 top-[50%] -translate-y-[50%] z-10 p-2 bg-white rounded-full shadow border border-gray-100 hover:bg-gray-50 active:scale-95 transition-all text-sjcet-maroon"
+              >
+                <ArrowDownUp className="w-4 h-4" />
+              </button>
+              
+              <SearchBar 
+                placeholder="Choose destination..."
+                initialValue={selectedRoom ? getRoomName(selectedRoom, activeFloor) : ''}
+                icon={Search}
+                onSelect={(id, floor) => {
+                  setActiveFloor(floor);
+                  setSelectedRoom(id);
+                }}
+                onClear={() => setSelectedRoom(null)}
+              />
+            </div>
+          )}
+
           {selectedRoom ? (
             <div className="animate-in fade-in zoom-in-95 duration-300">
               <div className="flex items-center justify-between mb-2">
-                <p className="text-xs font-bold text-gray-400 uppercase tracking-widest">Destination</p>
+                <p className="text-xs font-bold text-gray-400 uppercase tracking-widest">Route Summary</p>
                 {isNavigating && (
                    <span className="text-xs bg-green-100 text-green-700 font-bold px-2.5 py-1 rounded-full animate-pulse border border-green-200">Navigating</span>
                 )}
               </div>
-              <p className="text-2xl font-extrabold text-gray-800 drop-shadow-sm mb-4">{getRoomName(selectedRoom)}</p>
+              <p className="text-2xl font-extrabold text-gray-800 drop-shadow-sm mb-4">{getRoomName(selectedRoom, activeFloor)}</p>
               
               {!isNavigating && (
                 <div className="mb-6 bg-yellow-50 border-l-4 border-sjcet-gold text-yellow-900 p-4 rounded-r-xl text-sm flex items-start shadow-sm">
                   <Info className="w-5 h-5 mr-3 mt-0.5 flex-shrink-0 text-sjcet-gold" />
-                  <p className="leading-relaxed">Step-by-step navigation will begin from your current check-in location to <strong>{getRoomName(selectedRoom)}</strong>.</p>
+                  <div className="leading-relaxed flex flex-col">
+                    <p>Route will be mapped from <strong>{getRoomName(startNode, startFloorAnchor)}</strong> to <strong>{getRoomName(selectedRoom, activeFloor)}</strong>.</p>
+                  </div>
                 </div>
               )}
             </div>
@@ -198,15 +260,15 @@ function App() {
 
           {!isNavigating && (
              <button 
-               onClick={startNavigation}
-               disabled={!selectedRoom}
+               onClick={() => startNavigation()}
+               disabled={!selectedRoom || !startNode}
                className={`w-full py-4 rounded-2xl font-bold text-lg shadow-xl transition-all duration-300 transform ${
-                 selectedRoom 
+                 (selectedRoom && startNode) 
                    ? 'bg-sjcet-maroon text-sjcet-gold hover:bg-sjcet-maroon-light active:scale-95 shadow-sjcet-maroon/30' 
                    : 'bg-gray-100 text-gray-400 cursor-not-allowed shadow-none'
                }`}
              >
-               {selectedRoom ? 'Start Navigation' : 'Select Destination'}
+               {(selectedRoom && startNode) ? 'Start Navigation' : 'Select Locations'}
              </button>
           )}
         </div>
