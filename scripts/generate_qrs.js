@@ -30,7 +30,7 @@ function getWiFiIpAddress() {
 
 const localIp = getWiFiIpAddress();
 // Use the original qr_codes folder so we overwrite them!
-const BASE_URL = `http://${localIp}:5173/`;
+const BASE_URL = `https://sjcet-nav.vercel.app/`;
 const OUTPUT_DIR = './qr_codes';
 
 console.log(`Using base URL: ${BASE_URL}`);
