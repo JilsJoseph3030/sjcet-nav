@@ -5,7 +5,7 @@ import SearchBar from './components/SearchBar';
 import { computeShortestPath } from './utils/pathfinding';
 import { usePDR } from './utils/usePDR';
 import { useGeolocation } from './utils/useGeolocation';
-import graphData from './utils/graph.json';
+import { fetchRoutingGraph } from './utils/supabaseClient';
 
 function App() {
   const [selectedRoom, setSelectedRoom] = useState(null);
@@ -18,12 +18,23 @@ function App() {
   const [startNode, setStartNode] = useState('entrance');
   const [startFloorAnchor, setStartFloorAnchor] = useState('ground');
   const [navInstructions, setNavInstructions] = useState([]);
+  const [graphData, setGraphData] = useState(null);
   
   // Phase 4: Pedestrian Dead Reckoning Sensors
   const { heading, steps, isSupported } = usePDR();
 
   // Phase 5: Campus Geofencing
   const { isOutside, setIsOutside, openGoogleMaps } = useGeolocation();
+
+  useEffect(() => {
+    fetchRoutingGraph().then(data => {
+      if (data) {
+        setGraphData(data);
+      } else {
+        console.error("Failed to fetch graph data from Supabase");
+      }
+    });
+  }, []);
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
@@ -49,13 +60,13 @@ function App() {
   };
 
   const startNavigation = (fromId = startNode, fromFloor = startFloorAnchor, toId = selectedRoom, toFloor = activeFloor) => {
-    if (!fromId || !toId) return;
+    if (!fromId || !toId || !graphData) return;
 
     setIsNavigating(true);
     setSheetExpanded(false);
     
-    // Phase 2: Compute route utilizing A* Engine
-    const route = computeShortestPath(fromId, fromFloor, toId, toFloor);
+    // Phase 2: Compute route utilizing A* Engine + Supabase Data
+    const route = computeShortestPath(fromId, fromFloor, toId, toFloor, graphData);
     if (route && route.instructions.length > 0) {
       setNavInstructions(route.instructions);
       setCurrentRoute(route);
@@ -90,10 +101,20 @@ function App() {
   };
 
   const getRoomName = (id, floor) => {
-    if (!id) return '';
+    if (!id || !graphData) return '';
     const node = graphData[floor]?.nodes[id];
     return node ? node.name : id.replace('room-', '').toUpperCase().replace(/-/g, ' ');
   };
+
+  if (!graphData) {
+    return (
+      <div className="min-h-screen bg-sjcet-bg flex items-center justify-center flex-col p-4 text-center">
+        <div className="w-12 h-12 border-4 border-sjcet-gold border-t-sjcet-maroon rounded-full animate-spin mb-4"></div>
+        <h2 className="text-xl font-bold text-gray-800">Loading Building Data...</h2>
+        <p className="text-gray-500 mt-2">Connecting to SJCET Spatial Database</p>
+      </div>
+    );
+  }
 
   return (
     <div className="h-[100dvh] w-full bg-sjcet-bg text-gray-900 flex flex-col font-sans relative overflow-hidden">
@@ -201,6 +222,7 @@ function App() {
                 placeholder="Choose starting point..."
                 initialValue={startNode ? getRoomName(startNode, startFloorAnchor) : ''}
                 icon={MapPin}
+                graphData={graphData}
                 onSelect={(id, floor) => {
                   setStartNode(id);
                   setStartFloorAnchor(floor);
@@ -220,6 +242,7 @@ function App() {
                 placeholder="Choose destination..."
                 initialValue={selectedRoom ? getRoomName(selectedRoom, activeFloor) : ''}
                 icon={Search}
+                graphData={graphData}
                 onSelect={(id, floor) => {
                   setActiveFloor(floor);
                   setSelectedRoom(id);

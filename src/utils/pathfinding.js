@@ -1,5 +1,3 @@
-import graphData from './graph.json';
-
 class PriorityQueue {
   constructor() {
     this.elements = [];
@@ -16,8 +14,8 @@ class PriorityQueue {
   }
 }
 
-// Full A* Pathfinding Engine (Phase 2 completion)
-export function computeShortestPath(startNodeId, startFloor, targetNodeId, targetFloor) {
+// Full A* Pathfinding Engine utilizing Supabase graph data
+export function computeShortestPath(startNodeId, startFloor, targetNodeId, targetFloor, graphData) {
   if (!startNodeId || !targetNodeId) return null;
 
   // Combine floors into a single unified graph for pathfinding
