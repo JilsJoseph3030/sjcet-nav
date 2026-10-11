@@ -3,9 +3,8 @@ import { useState, useEffect } from 'react';
 // SJCET Palai - St. Francis Block approximate GPS coordinates
 const TARGET_LAT = 9.7288;
 const TARGET_LNG = 76.6836;
-const GEOFENCE_RADIUS_METERS = 50;
+const GEOFENCE_RADIUS_METERS = 80;
 
-// Haversine formula to calculate physical distance between two GPS points
 function getDistanceInMeters(lat1, lon1, lat2, lon2) {
   const R = 6371e3; // Earth radius in meters
   const p1 = lat1 * Math.PI/180;
@@ -24,36 +23,70 @@ function getDistanceInMeters(lat1, lon1, lat2, lon2) {
 export function useGeolocation() {
   const [isOutside, setIsOutside] = useState(false);
   const [locationError, setLocationError] = useState(null);
+  const [isPermissionDenied, setIsPermissionDenied] = useState(false);
 
   useEffect(() => {
-    if (!navigator.geolocation) {
-      setLocationError("Geolocation is not supported by your browser.");
+    // 1. Guard against environments where geolocation is unavailable
+    if (typeof navigator === 'undefined' || !navigator.geolocation) {
+      setLocationError("Geolocation is not supported by your browser or environment.");
       return;
     }
 
-    // Attempt to get user's current GPS location
-    navigator.geolocation.getCurrentPosition(
-      (position) => {
-        const { latitude, longitude } = position.coords;
-        const distance = getDistanceInMeters(latitude, longitude, TARGET_LAT, TARGET_LNG);
-        
-        // If they are further than 50 meters from the building, flag them as outside
-        if (distance > GEOFENCE_RADIUS_METERS) {
-          setIsOutside(true);
-        } else {
+    try {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          try {
+            if (!position || !position.coords) return;
+            const { latitude, longitude } = position.coords;
+            const distance = getDistanceInMeters(latitude, longitude, TARGET_LAT, TARGET_LNG);
+            
+            // Only trigger outside warning if genuinely far and coordinates are valid
+            if (!isNaN(distance) && distance > GEOFENCE_RADIUS_METERS) {
+              setIsOutside(true);
+            } else {
+              setIsOutside(false);
+            }
+            setLocationError(null);
+            setIsPermissionDenied(false);
+          } catch (err) {
+            console.warn("Error computing GPS distance:", err);
+          }
+        },
+        (error) => {
+          // Graceful fallback: If GPS denied or timed out, do NOT lock the user out!
+          switch (error.code) {
+            case error.PERMISSION_DENIED:
+              setIsPermissionDenied(true);
+              setLocationError("Location permission denied. Defaulting to indoor navigation mode.");
+              break;
+            case error.POSITION_UNAVAILABLE:
+              setLocationError("GPS position unavailable indoors. Continuing in local map mode.");
+              break;
+            case error.TIMEOUT:
+              setLocationError("GPS request timed out. Continuing in local map mode.");
+              break;
+            default:
+              setLocationError(error.message);
+          }
+          // Do not lock out user if GPS fails or is denied indoors
           setIsOutside(false);
-        }
-      },
-      (error) => {
-        setLocationError(error.message);
-      },
-      { enableHighAccuracy: true, maximumAge: 10000, timeout: 5000 }
-    );
+        },
+        { enableHighAccuracy: false, maximumAge: 60000, timeout: 6000 }
+      );
+    } catch (err) {
+      console.warn("Geolocation invocation failed:", err);
+      setLocationError("Unable to query location.");
+      setIsOutside(false);
+    }
   }, []);
 
   const openGoogleMaps = () => {
-    window.open(`https://www.google.com/maps/dir/?api=1&destination=${TARGET_LAT},${TARGET_LNG}`, '_blank');
+    try {
+      window.open(`https://www.google.com/maps/dir/?api=1&destination=${TARGET_LAT},${TARGET_LNG}`, '_blank');
+    } catch {
+      window.location.href = `https://www.google.com/maps/dir/?api=1&destination=${TARGET_LAT},${TARGET_LNG}`;
+    }
   };
 
-  return { isOutside, setIsOutside, locationError, openGoogleMaps };
+  return { isOutside, setIsOutside, locationError, isPermissionDenied, openGoogleMaps };
 }
