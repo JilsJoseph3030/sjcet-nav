@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Search, X, MapPin, Accessibility } from 'lucide-react';
+import { matchCategory } from '../utils/amenities';
 
 export default function SearchBar({ 
   placeholder, 
@@ -8,7 +9,8 @@ export default function SearchBar({
   onClear, 
   icon: Icon = Search, 
   graphData,
-  categoryFilter = 'all'
+  categoryFilter = 'all',
+  currentFloor
 }) {
   const [query, setQuery] = useState(initialValue || '');
   const [results, setResults] = useState([]);
@@ -46,13 +48,22 @@ export default function SearchBar({
 
     // Apply category filter if active
     if (categoryFilter && categoryFilter !== 'all') {
-      filtered = filtered.filter(item => item.category === categoryFilter);
+      filtered = filtered.filter(item => matchCategory(item.category, categoryFilter));
+    }
+
+    // Sort to prioritize current floor
+    if (currentFloor) {
+      filtered = [...filtered].sort((a, b) => {
+        if (a.floor === currentFloor && b.floor !== currentFloor) return -1;
+        if (a.floor !== currentFloor && b.floor === currentFloor) return 1;
+        return 0;
+      });
     }
 
     if (query.trim() === '' || query === initialValue) {
       // When category filter is active, show matching category items even with empty query!
       if (categoryFilter && categoryFilter !== 'all' && isFocused) {
-        setResults(filtered.slice(0, 8));
+        setResults(filtered.slice(0, 10));
       } else {
         setResults([]);
       }

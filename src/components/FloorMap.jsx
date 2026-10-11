@@ -6,6 +6,7 @@ import firstFloorUrl from '../assets/first_floor.svg?raw';
 import secondFloorUrl from '../assets/second_floor.svg?raw';
 import thirdFloorUrl from '../assets/third_floor.svg?raw';
 import fourthFloorUrl from '../assets/fourth_floor.svg?raw';
+import { resolveNodeId, matchCategory } from '../utils/amenities';
 
 const maps = {
   ground: groundFloorUrl,
@@ -15,18 +16,15 @@ const maps = {
   fourth: fourthFloorUrl
 };
 
-// Normalize SVG IDs to match graph node IDs
-function normalizeRoomId(rawId) {
-  if (!rawId) return null;
-  // If rawId is "room-001-managers-room", normalized is "room-001"
-  const match = rawId.match(/^room-(\d+[a-zA-Z]?)/);
-  if (match) {
-    return `room-${match[1]}`;
-  }
-  return rawId;
-}
-
-export default function FloorMap({ floor, onRoomSelect, selectedRoom, isNavigating, currentRoute, graphData }) {
+export default function FloorMap({ 
+  floor, 
+  onRoomSelect, 
+  selectedRoom, 
+  isNavigating, 
+  currentRoute, 
+  graphData,
+  activeCategory = 'all'
+}) {
   const svgContainerRef = useRef(null);
   const transformComponentRef = useRef(null);
   const [hoveredRoom, setHoveredRoom] = useState(null);
@@ -42,8 +40,8 @@ export default function FloorMap({ floor, onRoomSelect, selectedRoom, isNavigati
       let target = e.target;
       while (target && target !== svgDoc) {
         if (target.id && (target.id.startsWith('room-') || target.id.startsWith('lift-') || target.id.startsWith('stairs-'))) {
-          const normId = normalizeRoomId(target.id);
-          onRoomSelect(normId);
+          const resolvedId = resolveNodeId(target.id, floor, graphData);
+          onRoomSelect(resolvedId);
           break;
         }
         target = target.parentElement;
@@ -54,11 +52,11 @@ export default function FloorMap({ floor, onRoomSelect, selectedRoom, isNavigati
       let target = e.target;
       while (target && target !== svgDoc) {
         if (target.id && (target.id.startsWith('room-') || target.id.startsWith('lift-') || target.id.startsWith('stairs-'))) {
-          const normId = normalizeRoomId(target.id);
-          const node = graphData?.[floor]?.nodes?.[normId];
+          const resolvedId = resolveNodeId(target.id, floor, graphData);
+          const node = graphData?.[floor]?.nodes?.[resolvedId];
           const roomTitle = target.querySelector('title')?.textContent || node?.name || target.getAttribute('data-name');
           if (roomTitle) {
-            setHoveredRoom({ name: roomTitle, id: normId });
+            setHoveredRoom({ name: roomTitle, id: resolvedId });
           }
           break;
         }
@@ -84,6 +82,59 @@ export default function FloorMap({ floor, onRoomSelect, selectedRoom, isNavigati
     };
   }, [onRoomSelect, floor, graphData]);
 
+  // Highlight rooms matching active amenity category directly on the map
+  useEffect(() => {
+    if (!svgContainerRef.current) return;
+    const svgDoc = svgContainerRef.current.querySelector('svg');
+    if (!svgDoc) return;
+
+    // Remove any previous amenity markers
+    const oldMarkers = svgDoc.querySelectorAll('.amenity-marker-pin');
+    oldMarkers.forEach(m => m.remove());
+
+    const rooms = svgDoc.querySelectorAll('[id^="room-"], [id^="lift-"]');
+    rooms.forEach(room => {
+      const resolvedId = resolveNodeId(room.id, floor, graphData);
+      const node = graphData?.[floor]?.nodes?.[resolvedId];
+      const isSelected = resolvedId === selectedRoom || room.id === selectedRoom;
+
+      if (!isSelected) {
+        if (activeCategory && activeCategory !== 'all' && node && matchCategory(node.category, activeCategory)) {
+          room.classList.add('amenity-highlight');
+
+          // Attach subtle pulsing visual indicator over highlighted amenity
+          try {
+            const bbox = room.getBBox();
+            if (bbox && bbox.width > 0 && bbox.height > 0) {
+              const centerX = bbox.x + bbox.width / 2;
+              const centerY = bbox.y + bbox.height / 2;
+
+              const pin = document.createElementNS("http://www.w3.org/2000/svg", "g");
+              pin.setAttribute("class", "amenity-marker-pin");
+              pin.setAttribute("transform", `translate(${centerX}, ${centerY})`);
+              pin.style.cursor = "pointer";
+              pin.onclick = (e) => {
+                e.stopPropagation();
+                onRoomSelect(resolvedId);
+              };
+
+              pin.innerHTML = `
+                <circle r="16" fill="#c5a059" fill-opacity="0.3" class="amenity-pulse-badge" />
+                <circle r="8" fill="#800000" stroke="#c5a059" stroke-width="2" />
+                <circle r="3" fill="#ffffff" />
+              `;
+              svgDoc.appendChild(pin);
+            }
+          } catch {
+            // Fallback if SVG geometry calculation is unavailable
+          }
+        } else {
+          room.classList.remove('amenity-highlight');
+        }
+      }
+    });
+  }, [activeCategory, floor, graphData, selectedRoom, onRoomSelect]);
+
   // Style selected rooms and attach animated destination pin
   useEffect(() => {
     if (!svgContainerRef.current) return;
@@ -94,12 +145,13 @@ export default function FloorMap({ floor, onRoomSelect, selectedRoom, isNavigati
     const existingPin = svgDoc.querySelector('.destination-pin-overlay');
     if (existingPin) existingPin.remove();
 
-    const rooms = svgDoc.querySelectorAll('[id^="room-"]');
+    const rooms = svgDoc.querySelectorAll('[id^="room-"], [id^="lift-"]');
     rooms.forEach(room => {
-      const normId = normalizeRoomId(room.id);
-      const isSelected = normId === selectedRoom || room.id === selectedRoom;
+      const resolvedId = resolveNodeId(room.id, floor, graphData);
+      const isSelected = resolvedId === selectedRoom || room.id === selectedRoom;
 
       if (isSelected) {
+        room.classList.remove('amenity-highlight');
         room.style.fill = '#c5a059'; 
         room.style.stroke = '#800000';
         room.style.strokeWidth = '3px';
@@ -136,7 +188,7 @@ export default function FloorMap({ floor, onRoomSelect, selectedRoom, isNavigati
         room.classList.remove('navigating-glow');
       }
     });
-  }, [selectedRoom, floor, isNavigating]);
+  }, [selectedRoom, floor, isNavigating, activeCategory]);
 
   // Draw animated navigation path polylines
   useEffect(() => {

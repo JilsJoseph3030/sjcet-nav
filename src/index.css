@@ -108,6 +108,35 @@
   }
 }
 
+/* Amenity Highlight Glow on Map */
+.amenity-highlight {
+  fill: #fef08a !important;
+  stroke: #c5a059 !important;
+  stroke-width: 3.5px !important;
+  animation: amenity-pulse 1.8s ease-in-out infinite alternate !important;
+}
+
+@keyframes amenity-pulse {
+  0% {
+    fill: #fef08a;
+    filter: drop-shadow(0 0 4px rgba(197, 160, 89, 0.5));
+  }
+  100% {
+    fill: #fde047;
+    filter: drop-shadow(0 0 16px rgba(197, 160, 89, 0.9));
+  }
+}
+
+.amenity-pulse-badge {
+  animation: badge-ping 1.6s cubic-bezier(0, 0, 0.2, 1) infinite;
+  transform-origin: center;
+}
+
+@keyframes badge-ping {
+  0%, 100% { opacity: 0.8; transform: scale(0.9); }
+  50% { opacity: 0.2; transform: scale(1.5); }
+}
+
 .navigating-glow {
   animation: pulse-glow 1.5s infinite alternate;
 }

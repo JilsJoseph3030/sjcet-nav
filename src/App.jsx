@@ -21,6 +21,7 @@ import { computeShortestPath } from './utils/pathfinding';
 import { usePDR } from './utils/usePDR';
 import { useGeolocation } from './utils/useGeolocation';
 import graphData from './utils/graph.json';
+import { getRoomDisplayName, getFilteredAmenities, FLOOR_LABELS } from './utils/amenities';
 
 function App() {
   const [selectedRoom, setSelectedRoom] = useState(null);
@@ -160,9 +161,23 @@ function App() {
   };
 
   const getRoomName = (id, floor) => {
-    if (!id || !graphData) return '';
-    const node = graphData[floor]?.nodes[id];
-    return node ? node.name : id.replace('room-', '').toUpperCase().replace(/-/g, ' ');
+    return getRoomDisplayName(id, floor, graphData);
+  };
+
+  const filteredAmenities = React.useMemo(() => {
+    return getFilteredAmenities(activeCategory, graphData, activeFloor);
+  }, [activeCategory, activeFloor]);
+
+  const handleSelectCategory = (cat) => {
+    setActiveCategory(cat);
+    setSheetExpanded(true);
+    if (cat !== 'all') {
+      const result = getFilteredAmenities(cat, graphData, activeFloor);
+      if (result.currentFloorItems.length === 0 && result.otherFloorItems.length > 0) {
+        const targetFloor = result.otherFloorItems[0].floor;
+        setActiveFloor(targetFloor);
+      }
+    }
   };
 
   const handleQRCalibrate = ({ floor, node }) => {
@@ -260,7 +275,7 @@ function App() {
         <div className="bg-white/95 backdrop-blur-md border-b border-slate-200/80 px-3 shadow-xs">
           <AmenityFilterChips 
             activeCategory={activeCategory} 
-            onSelectCategory={(cat) => setActiveCategory(cat)} 
+            onSelectCategory={handleSelectCategory} 
           />
         </div>
       </div>
@@ -274,6 +289,7 @@ function App() {
           isNavigating={isNavigating}
           currentRoute={currentRoute}
           graphData={graphData}
+          activeCategory={activeCategory}
         />
         
         {/* Active Start Point Badge */}
@@ -360,6 +376,7 @@ function App() {
                   icon={Search}
                   graphData={graphData}
                   categoryFilter={activeCategory}
+                  currentFloor={activeFloor}
                   onSelect={(id, floor) => {
                     setActiveFloor(floor);
                     setSelectedRoom(id);
@@ -367,6 +384,75 @@ function App() {
                   onClear={() => setSelectedRoom(null)}
                 />
               </div>
+
+              {/* Amenity Filter Quick-Picks Tray */}
+              {activeCategory && activeCategory !== 'all' && (
+                <div className="mb-3 p-3 bg-amber-50/80 border border-amber-200/90 rounded-2xl animate-in fade-in slide-in-from-top-1">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-xs font-extrabold text-amber-950 flex items-center space-x-1.5">
+                      <Sparkles className="w-3.5 h-3.5 text-amber-600" />
+                      <span>{filteredAmenities.totalCount} {activeCategory === 'canteen' ? 'dining spots' : activeCategory} found</span>
+                    </span>
+                    <button
+                      onClick={() => setActiveCategory('all')}
+                      className="text-[11px] font-bold text-amber-800 hover:text-amber-950 bg-amber-100 hover:bg-amber-200 px-2.5 py-0.5 rounded-full transition-colors cursor-pointer"
+                    >
+                      Clear filter
+                    </button>
+                  </div>
+
+                  {filteredAmenities.currentFloorItems.length > 0 ? (
+                    <div className="flex flex-wrap gap-1.5 max-h-28 overflow-y-auto hide-scrollbar">
+                      {filteredAmenities.currentFloorItems.map((item) => (
+                        <button
+                          key={item.id}
+                          onClick={() => {
+                            setSelectedRoom(item.id);
+                            setActiveFloor(item.floor);
+                          }}
+                          className={`px-2.5 py-1.5 rounded-xl text-xs font-bold transition-all text-left flex items-center space-x-1.5 border active:scale-95 cursor-pointer ${
+                            selectedRoom === item.id
+                              ? 'bg-sjcet-maroon text-white border-sjcet-maroon shadow-sm'
+                              : 'bg-white text-slate-800 border-amber-200 hover:bg-amber-100/70 shadow-xs'
+                          }`}
+                        >
+                          <MapPin className="w-3 h-3 shrink-0 text-sjcet-gold" />
+                          <span className="truncate max-w-[190px]">{item.name}</span>
+                        </button>
+                      ))}
+                    </div>
+                  ) : (
+                    <p className="text-xs text-amber-800 font-medium">
+                      No matching places on {FLOOR_LABELS[activeFloor] || activeFloor}.
+                    </p>
+                  )}
+
+                  {filteredAmenities.otherFloorItems.length > 0 && (
+                    <div className="mt-2 pt-2 border-t border-amber-200/60">
+                      <p className="text-[10px] font-bold text-amber-900/80 uppercase tracking-wide mb-1.5">
+                        Also available on other floors:
+                      </p>
+                      <div className="flex flex-wrap gap-1.5 max-h-24 overflow-y-auto hide-scrollbar">
+                        {filteredAmenities.otherFloorItems.map((item) => (
+                          <button
+                            key={`${item.floor}-${item.id}`}
+                            onClick={() => {
+                              setActiveFloor(item.floor);
+                              setSelectedRoom(item.id);
+                            }}
+                            className="px-2 py-1 rounded-lg text-[11px] font-semibold bg-white text-slate-700 hover:bg-amber-50 border border-amber-200 hover:border-amber-300 transition-all flex items-center space-x-1 active:scale-95 cursor-pointer"
+                          >
+                            <span className="text-[10px] font-extrabold text-sjcet-maroon bg-amber-100 px-1 rounded">
+                              {item.floor === 'ground' ? '0F' : `${item.floor.charAt(0).toUpperCase()}F`}
+                            </span>
+                            <span className="truncate max-w-[150px]">{item.name}</span>
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              )}
             </>
           )}
 
