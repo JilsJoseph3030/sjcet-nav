@@ -1,327 +1,135 @@
-<svg viewBox="0 0 1000 1325" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif" xmlns:c2pa="http://c2pa.org/manifest"><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTo4YWRiMmQwZS0yMjRiLTRiZDAtODcxZS1hZDEzZmU2Njg0YzAAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaO69/uQ/VKJPOpEhxUOda/0AAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDo0ZWIxNWZiOS1kZWM5LTRlNTEtOGI3My1lNGE0MTMwNjdjYzJscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNoTFcBby+2m189mPr8YNOZzQAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggW9qTNjXGfvcS/DkGTSxKYIMjCgeAkA9Izx9tUSoRV9ikZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaDX9udBLpWlijLdKXKkcn/YAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRNAAAAAAAAAAAAAAAAAGRoYXNoWCA7cvhf5HWUXo65YUwe46ZVKcu0BLROZoeKU41t6lISY2RuYW1lbmp1bWJmIG1hbmlmZXN0amV4Y2x1c2lvbnOBomVzdGFydBifZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjhhZGIyZDBlLTIyNGItNGJkMC04NzFlLWFkMTNmZTY2ODRjMC9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjQyZjFkMzFhLWQ0ZjQtNDA3Zi04YmZiLTc0YTdhNzAyNmJkZHJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCBb2pM2NcZ+9xL8OQZNLEpggyMKB4CQD0jPH21RKhFX2KJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggVaM9CBdI2ZCqMMOTplBgH3wKDzufwzo5wO9gREhNDtaiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggITUrAf0/fykyZR/9D5QjX7THMsoTUxjnwOxgVQKkFah0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQAiaGNhzGB2khCUVAYyMDkJlhAXH51M0OS+GB6IRnEaoZq2LO3anuuzdfLET0yUayUxmX3q4IBHLhg44TpcUVRg=</c2pa:manifest></metadata>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1400" role="img" aria-labelledby="map-title map-desc" id="floorplan-st-francis-0f" data-building="st-francis-block" data-floor="0" xmlns:c2pa="http://c2pa.org/manifest"><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTpkZWQ3OGZmYy01NmJkLTQ2MWItYmYxZS0wMDk0MWI3N2I0YzIAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaBJvf6IrcqNtl7WV+GhrCswAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDpjYTViNWIyMS1lMDIzLTRkNDItODc1My1kZTY5OGU0MTQzOWVscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNo1985o//nuwgFAEFCgmxL8gAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggswAecR7ToymOQHDaSAI8QLJRaI0mckpVSmnTSSUGnDSkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaJu3yDL2AeoQe19RxrEu33wAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRNAAAAAAAAAAAAAAAAAGRoYXNoWCDcj4aIwY/KQWYhZzAVQF5tq1BtxKmIYrIVq+Q/Fiw/lmRuYW1lbmp1bWJmIG1hbmlmZXN0amV4Y2x1c2lvbnOBomVzdGFydBj8Zmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOmRlZDc4ZmZjLTU2YmQtNDYxYi1iZjFlLTAwOTQxYjc3YjRjMi9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjQzOGRmYWVkLWJmOGMtNDZiOC1iMmRhLTU0MjA5NzQ0ZGUyOXJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCCzAB5xHtOjKY5AcNpIAjxAslFojSZySlVKadNJJQacNKJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggadfIxt1ODDNWrqhwiKXZfD93TbeNlZlJnPYinP7sfGeiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggBEX1ej+5m1IRSeMOavxNkahiJJchZgPHYRdbgXK/Cd90Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQDTuwkHCjKwPjUhAIhiXMt6z6eoLJ9TWiTy+v2Q0EfYuTi3SxmnONUZpgi/quekrNmkTvCbjnmJ4PaiAfMQELTU=</c2pa:manifest></metadata>
+  <title id="map-title">St. Francis Block - Ground Floor Layout | SJCET Palai</title>
+  <desc id="map-desc">Indoor navigation plan of St. Francis Block, ground floor: 17 rooms, corridors, stairs and lifts. Every non-room area inside the building is walkable corridor or an explicit void/outdoor area.</desc>
   <defs>
-    <style>
-      .wall        { fill: none; stroke: #800000; stroke-width: 3; }
-      .room        { fill: #f8f9fa; stroke: #800000; stroke-width: 2; cursor: pointer; transition: fill .2s; }
-      .room:hover  { fill: #c5a059; }
-      .utility     { fill: #eef0f2; stroke: #800000; stroke-width: 1.3; cursor: pointer; }
-      .core        { fill: #800000; opacity: .88; cursor: pointer; }
-      .diamondBg   { fill: #fffdf8; stroke: #800000; stroke-width: 2.5; }
-      .label       { fill: #2b2b2b; font-size: 11px; text-anchor: middle; pointer-events: none; }
-      .label-sm    { fill: #2b2b2b; font-size: 8.5px; text-anchor: middle; pointer-events: none; }
-      .label-core  { fill: #ffffff; font-size: 8.5px; font-weight: bold; text-anchor: middle; pointer-events: none; }
-      .outline     { fill: none; stroke: #800000; stroke-width: 3.5; }
-      /* navigation graph */
-      .navEdge     { stroke: #c5a059; stroke-width: 2.5; stroke-dasharray: 6 4; fill: none; opacity: .85; }
-      .navNode     { fill: #c5a059; stroke: #800000; stroke-width: 1.2; }
-      .navNode:hover { fill: #800000; }
-      .navLabel    { fill: #6b4f1d; font-size: 7px; text-anchor: middle; pointer-events: none; }
-    </style>
+    <pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#EAE4D8"/><line x1="0" y1="0" x2="0" y2="8" stroke="#B8AE9C" stroke-width="1.2"/></pattern>
+    <pattern id="steps" width="7" height="7" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#E2E8F0"/><line x1="0" y1="0" x2="7" y2="0" stroke="#718096" stroke-width="1"/></pattern>
   </defs>
+  <style>
+    :root { --brand:#7A1C1C; --brand-dark:#5C1414; --brand-tint:#F6E4E4; --paper:#FFFFFF; --wall:#2D3748; --room:#F7FAFC; --room-edge:#CBD5E0; --walk:#EDF2F7; --vert:#E2E8F0; --text:#1A2020; --serif:Georgia,"Times New Roman",serif; --sans:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+    svg { background:var(--paper); font-family:var(--sans); }
+    #corridors .base { fill:var(--walk); stroke:none; }
+    #corridors .seg { fill:transparent; stroke:none; }
+    #corridors .seg.route { fill:var(--brand); fill-opacity:.30; }
+    #rooms .room { fill:var(--room); stroke:var(--room-edge); stroke-width:2; cursor:pointer; transition:fill .15s; }
+    #rooms .room:hover { fill:var(--brand-tint); }
+    #rooms .room.selected { fill:var(--brand); stroke:var(--brand-dark); }
+    #rooms .void { fill:var(--vert); stroke:#A0AEC0; stroke-width:1.2; }
+    #rooms .court { fill:var(--walk); stroke:var(--room-edge); stroke-width:1.5; }
+    #rooms .line { stroke:#A0AEC0; stroke-width:1.2; fill:none; }
+    #rooms .outdoor { fill:url(#hatch); stroke:#B8AE9C; stroke-width:1.2; }
+    #stairs-lifts .stairs { fill:url(#steps); stroke:var(--wall); stroke-width:1.5; }
+    #stairs-lifts .shaft { fill:var(--vert); stroke:var(--wall); stroke-width:1.5; }
+    #stairs-lifts .lift { fill:var(--vert); stroke:var(--wall); stroke-width:2; }
+    #stairs-lifts .icon { fill:var(--wall); }
+    #stairs-lifts .icon-line { fill:none; stroke:var(--wall); stroke-width:1.2; }
+    #walls path { fill:none; stroke:var(--wall); stroke-width:4.5; stroke-linejoin:miter; stroke-linecap:square; }
+    #labels text { font-family:var(--sans); fill:var(--text); text-anchor:middle; dominant-baseline:central; pointer-events:none; }
+    #labels .num { font-size:18px; font-weight:700; }
+    #labels .num-sm { font-size:11.5px; font-weight:700; }
+    #labels .name { font-size:10.5px; font-weight:500; }
+    #labels .misc { font-size:11px; font-weight:600; letter-spacing:.8px; fill:#4A5568; }
+    #brand .band { fill:var(--brand); }
+    #brand text { fill:#fff; dominant-baseline:central; }
+    #brand .serif { font-family:var(--serif); }
+    #brand .sans { font-family:var(--sans); }
+    #legend text { font-family:var(--sans); font-size:12px; fill:var(--text); dominant-baseline:central; }
+  </style>
 
-  <!-- ============ TITLE ============ -->
-  <text x="500" y="20" text-anchor="middle" font-size="17" font-weight="bold" fill="#800000">
-    St. Francis Block — Ground Floor
-  </text>
-  <text x="500" y="34" text-anchor="middle" font-size="9" fill="#6b6b6b">
-    SJCET Palai · traced from institutional layout signage
-  </text>
-
-  <!-- ======================================================= -->
-  <!-- OUTER BUILDING OUTLINE (star / cross footprint, approx) -->
-  <!-- ======================================================= -->
-  <path class="outline" d="
-    M400,60 L600,60 L660,120 L760,120 L900,220 L820,300
-    L900,380 L780,460 L730,500 L730,600 L830,600 L830,590
-    L900,590 L900,930 L680,930 L680,600 L620,600 L620,930
-    L560,1010 L500,1060 L440,1010 L380,930 L320,930 L320,600
-    L260,600 L260,930 L100,930 L100,590 L170,590 L170,600
-    L270,600 L270,500 L220,460 L100,380 L180,300 L100,220
-    L240,120 L340,120 L400,60 Z" />
-
-  <!-- ======================================================= -->
-  <!-- TOP: STAGE (octagonal) -->
-  <!-- ======================================================= -->
-  <polygon id="stage" class="room" points="400,60 600,60 660,120 620,150 380,150 340,120" />
-  <text x="500" y="105" class="label">STAGE</text>
-
-  <!-- ======================================================= -->
-  <!-- TOP-LEFT DIAMOND WING: GD/PI cluster -->
-  <!-- ======================================================= -->
-  <polygon class="diamondBg" points="240,120 340,120 100,380 0,260" />
-  <g>
-    <rect id="room-GD-2" class="room" x="40" y="150" width="55" height="42" />
-    <text x="67" y="174" class="label-sm">GD-2</text>
-    <rect id="room-GD-3" class="room" x="95" y="140" width="55" height="42" />
-    <text x="122" y="164" class="label-sm">GD-3</text>
-    <rect id="room-008" class="room" x="78" y="185" width="52" height="38" />
-    <text x="104" y="207" class="label-sm">008</text>
-    <rect id="room-PI-4" class="room" x="150" y="172" width="45" height="38" />
-    <text x="172" y="194" class="label-sm">PI-4</text>
-    <rect id="room-PI-5" class="room" x="125" y="212" width="45" height="38" />
-    <text x="147" y="234" class="label-sm">PI-5</text>
-    <rect id="room-PI-6" class="room" x="80" y="222" width="42" height="38" />
-    <text x="101" y="244" class="label-sm">PI-6</text>
-    <rect id="room-PI-3" class="room" x="35" y="210" width="42" height="38" />
-    <text x="56" y="232" class="label-sm">PI-3</text>
-    <rect id="room-PI-2" class="room" x="48" y="250" width="42" height="38" />
-    <text x="69" y="272" class="label-sm">PI-2</text>
-    <rect id="room-PI-1" class="room" x="90" y="258" width="42" height="38" />
-    <text x="111" y="280" class="label-sm">PI-1</text>
+  <g id="corridors">
+    <polygon id="corridor-base" class="base" points="173.8,175.2 318,220 409,159.8 596.6,159.8 687.6,220 831.8,175.2 943.8,264.8 834.6,369.8 950.8,462.2 792.6,588.2 871,654 871,1153.8 612,1153.8 612,1111.8 413.2,1111.8 171,1111.8 171,733.8 201.8,733.8 201.8,654 213,588.2 54.8,462.2 171,369.8 61.8,264.8"/>
+    <polygon id="corridor-main" class="seg" data-type="corridor" data-walkable="true" points="171,733.8 871,733.8 871,798.2 171,798.2"/>
+    <polygon id="corridor-lobby-south" class="seg" data-type="corridor" data-walkable="true" points="427.2,798.2 612,798.2 612,1055.8 427.2,1055.8"/>
+    <polygon id="corridor-west-spine" class="seg" data-type="corridor" data-walkable="true" points="360,332 406.2,381 406.2,733.8 360,733.8"/>
+    <polygon id="corridor-east-spine" class="seg" data-type="corridor" data-walkable="true" points="645.6,332 599.4,381 599.4,733.8 645.6,733.8"/>
+    <polygon id="corridor-wing-west" class="seg" data-type="corridor" data-walkable="true" points="171,369.8 297,304 360,332 360,339 298.4,473.4 360,465 360,602.2 297,560.2 248,591 213,588.2 311,495.8"/>
+    <polygon id="corridor-wing-east" class="seg" data-type="corridor" data-walkable="true" points="834.6,369.8 708.6,304 645.6,332 645.6,339 707.2,473.4 645.6,465 645.6,602.2 708.6,560.2 757.6,591 792.6,588.2 694.6,495.8"/>
+    <polygon id="corridor-north-west" class="seg" data-type="corridor" data-walkable="true" points="173.8,175.2 318,220 360,332 297,304"/>
+    <polygon id="corridor-north-east" class="seg" data-type="corridor" data-walkable="true" points="831.8,175.2 687.6,220 645.6,332 708.6,304"/>
+    <polygon id="corridor-lobby-west" class="seg" data-type="corridor" data-walkable="true" points="269,698.8 313.8,698.8 313.8,654 360,654 360,682 313.8,682 313.8,733.8 269,733.8"/>
+    <polygon id="corridor-lobby-east" class="seg" data-type="corridor" data-walkable="true" points="736.6,698.8 691.8,698.8 691.8,654 645.6,654 645.6,682 691.8,682 691.8,733.8 736.6,733.8"/>
   </g>
 
-  <!-- ======================================================= -->
-  <!-- TOP-RIGHT DIAMOND WING: room 012 -->
-  <!-- ======================================================= -->
-  <polygon class="diamondBg" points="660,120 760,120 1000,260 900,380" />
-  <rect id="room-012" class="room" x="720" y="160" width="180" height="140" />
-  <text x="810" y="228" class="label" font-size="12">CIVIL SEMINAR</text>
-  <text x="810" y="243" class="label" font-size="12">HALL</text>
-  <text x="810" y="260" class="label-sm">012</text>
-
-  <!-- ======================================================= -->
-  <!-- SEMINAR HALL-01 / COURT / mirrored entry, with DN stairs -->
-  <!-- ======================================================= -->
-  <polygon id="room-court" class="room" points="330,240 420,290 330,340 240,290" />
-  <text x="330" y="294" class="label-sm">COURT</text>
-
-  <rect id="room-seminar-01" class="room" x="425" y="230" width="150" height="110" />
-  <text x="500" y="288" class="label">SEMINAR HALL-01</text>
-
-  <polygon class="room" points="670,240 760,290 670,340 580,290" />
-  <text x="670" y="294" class="label-sm">ENTRY</text>
-
-  <!-- diagonal DN staircases either side of seminar hall -->
-  <polygon class="utility" points="340,150 420,150 420,225 360,225" />
-  <text x="385" y="190" class="label-sm">DN</text>
-  <polygon class="utility" points="580,150 660,150 640,225 580,225" />
-  <text x="615" y="190" class="label-sm">DN</text>
-
-  <!-- ======================================================= -->
-  <!-- STORE (center) -->
-  <!-- ======================================================= -->
-  <rect id="room-store" class="room" x="425" y="345" width="150" height="70" />
-  <text x="500" y="384" class="label">STORE</text>
-
-  <!-- ======================================================= -->
-  <!-- MID-LEFT DIAMOND WING: 007 / GD-1 / 006 -->
-  <!-- ======================================================= -->
-  <polygon class="diamondBg" points="270,420 100,380 180,300 340,340" />
-  <rect id="room-007" class="room" x="115" y="335" width="140" height="55" />
-  <text x="185" y="358" class="label-sm">PLACEMENT CTRL</text>
-  <text x="185" y="371" class="label-sm">007</text>
-  <rect id="room-GD-1" class="room" x="120" y="392" width="130" height="60" />
-  <text x="185" y="425" class="label-sm">GD-1</text>
-
-  <polygon class="diamondBg" points="270,460 220,460 260,500 300,540 340,500" />
-  <rect id="room-006" class="room" x="225" y="460" width="95" height="55" />
-  <text x="272" y="484" class="label-sm">ELECTRICAL</text>
-  <text x="272" y="496" class="label-sm">CIRCUIT RM 006</text>
-
-  <!-- ======================================================= -->
-  <!-- MID-RIGHT DIAMOND WING: 013 / 014 -->
-  <!-- ======================================================= -->
-  <polygon class="diamondBg" points="730,420 900,380 820,300 660,340" />
-  <rect id="room-013" class="room" x="745" y="335" width="140" height="90" />
-  <text x="815" y="373" class="label-sm">VALUATION</text>
-  <text x="815" y="386" class="label-sm">CAMP KTU 013</text>
-
-  <polygon class="diamondBg" points="730,460 780,460 740,500 700,540 660,500" />
-  <rect id="room-014" class="room" x="680" y="460" width="90" height="50" />
-  <text x="725" y="482" class="label-sm">LADIES</text>
-  <text x="725" y="494" class="label-sm">WAITING 014</text>
-
-  <!-- ======================================================= -->
-  <!-- SACRISTY - ALTER - SACRISTY -->
-  <!-- ======================================================= -->
-  <rect id="room-sacristy-l" class="room" x="425" y="420" width="42" height="45" />
-  <text x="446" y="446" class="label-sm">SACRISTY</text>
-  <rect id="room-alter" class="room" x="467" y="420" width="66" height="45" />
-  <text x="500" y="446" class="label-sm">ALTER</text>
-  <rect id="room-sacristy-r" class="room" x="533" y="420" width="42" height="45" />
-  <text x="554" y="446" class="label-sm">SACRISTY</text>
-
-  <!-- ======================================================= -->
-  <!-- PRAYER HALL (011) -->
-  <!-- ======================================================= -->
-  <rect id="room-011" class="room" x="380" y="470" width="240" height="185" />
-  <text x="500" y="565" class="label" font-size="14">PRAYER HALL</text>
-  <text x="500" y="582" class="label-sm">011</text>
-
-  <!-- ======================================================= -->
-  <!-- LEFT UTILITY COLUMN: 005 / 004 / LIFT -->
-  <!-- ======================================================= -->
-  <rect id="room-005" class="utility" x="270" y="470" width="105" height="55" />
-  <text x="322" y="493" class="label-sm">GENTS TOILET-</text>
-  <text x="322" y="505" class="label-sm">HANDICAPPED 005</text>
-
-  <rect id="room-004" class="utility" x="270" y="527" width="105" height="60" />
-  <text x="322" y="553" class="label-sm">GENTS'</text>
-  <text x="322" y="565" class="label-sm">TOILET 004</text>
-
-  <rect id="lift-left" class="core" x="270" y="589" width="105" height="46" />
-  <text x="322" y="615" class="label-core">LIFT</text>
-
-  <!-- ======================================================= -->
-  <!-- RIGHT UTILITY COLUMN: 015 / 016 / LIFT -->
-  <!-- ======================================================= -->
-  <rect id="room-015" class="utility" x="625" y="470" width="50" height="55" />
-  <text x="650" y="490" class="label-sm">H.TOILET</text>
-  <text x="650" y="502" class="label-sm">015</text>
-
-  <rect id="room-016" class="utility" x="677" y="470" width="103" height="55" />
-  <text x="728" y="493" class="label-sm">LADIES</text>
-  <text x="728" y="505" class="label-sm">TOILET 016</text>
-
-  <rect id="lift-right" class="core" x="625" y="527" width="105" height="60" />
-  <text x="677" y="560" class="label-core">LIFT</text>
-
-  <!-- ======================================================= -->
-  <!-- GUESTS WAITING AREA + flanking stairs -->
-  <!-- ======================================================= -->
-  <rect id="guests-waiting" class="room" x="380" y="659" width="240" height="65" />
-  <text x="500" y="695" class="label">GUESTS WAITING AREA</text>
-
-  <rect id="stair-left-up" class="core" x="270" y="589" width="0" height="0" opacity="0" /> <!-- placeholder spacer -->
-  <rect id="stair-left-lower" class="core" x="170" y="659" width="100" height="65" />
-  <text x="220" y="688" class="label-core">STAIRS</text>
-  <text x="220" y="700" class="label-core">UP</text>
-
-  <rect id="stair-right-lower" class="core" x="730" y="659" width="100" height="65" />
-  <text x="780" y="688" class="label-core">STAIRS</text>
-  <text x="780" y="700" class="label-core">UP</text>
-
-  <rect id="room-store-right" class="utility" x="830" y="659" width="70" height="65" />
-  <text x="865" y="695" class="label-sm">STORE</text>
-
-  <!-- ======================================================= -->
-  <!-- CENTRAL BOOK-STORE-BELOW / MAIN STAIR CORE -->
-  <!-- ======================================================= -->
-  <rect id="stair-main-core" class="core" x="400" y="730" width="200" height="100" />
-  <text x="500" y="775" class="label-core">BOOK STORE BELOW</text>
-  <text x="500" y="790" class="label-core">MAIN STAIRS UP / DN</text>
-
-  <!-- ======================================================= -->
-  <!-- LEFT LOWER BLOCK: 003 / 002 / 001 -->
-  <!-- ======================================================= -->
-  <rect id="room-003" class="room" x="100" y="730" width="270" height="100" />
-  <text x="235" y="778" class="label" font-size="13">PLACEMENT CELL</text>
-  <text x="235" y="794" class="label-sm">003</text>
-
-  <rect id="room-002" class="room" x="100" y="830" width="270" height="100" />
-  <text x="235" y="878" class="label" font-size="13">MEDICARE</text>
-  <text x="235" y="894" class="label-sm">002</text>
-
-  <rect id="room-001" class="room" x="100" y="930" width="270" height="110" />
-  <text x="240" y="978" class="label" font-size="13">MANAGER'S ROOM</text>
-  <text x="240" y="994" class="label-sm">001</text>
-
-  <!-- small utility notches inside 001 (toilet / drying / shower / GD room) -->
-  <rect id="room-001-toilet-1" class="utility" x="107" y="936" width="42" height="30" />
-  <text x="128" y="954" class="label-sm">TOILET</text>
-  <rect id="room-001-toilet-2" class="utility" x="107" y="970" width="42" height="30" />
-  <text x="128" y="988" class="label-sm">TOILET</text>
-  <rect id="room-001-drying" class="utility" x="107" y="1003" width="55" height="30" />
-  <text x="134" y="1021" class="label-sm">DRYING SPACE</text>
-  <rect id="room-001-shower" class="utility" x="153" y="936" width="60" height="30" />
-  <text x="183" y="954" class="label-sm">SHOWER / WM</text>
-  <rect id="room-001-gd" class="utility" x="167" y="1003" width="90" height="30" />
-  <text x="212" y="1021" class="label-sm">GD ROOM</text>
-
-  <!-- ======================================================= -->
-  <!-- RIGHT LOWER BLOCK: 017 / pantry / 018 / L-WASH / G-WASH -->
-  <!-- ======================================================= -->
-  <rect id="room-017" class="room" x="630" y="730" width="150" height="65" />
-  <text x="705" y="756" class="label-sm">VIP DINING</text>
-  <text x="705" y="768" class="label-sm">017</text>
-
-  <rect id="room-pantry" class="utility" x="782" y="730" width="118" height="45" />
-  <text x="841" y="756" class="label-sm">PANTRY</text>
-
-  <rect id="room-counter" class="utility" x="630" y="797" width="90" height="33" />
-  <text x="675" y="817" class="label-sm">COUNTER</text>
-
-  <rect id="room-018" class="room" x="630" y="832" width="270" height="205" />
-  <text x="765" y="925" class="label" font-size="14">CANTEEN /</text>
-  <text x="765" y="942" class="label" font-size="14">BOOK STORE</text>
-  <text x="765" y="958" class="label-sm">018</text>
-
-  <rect id="room-lwash" class="utility" x="700" y="1042" width="90" height="42" />
-  <text x="745" y="1067" class="label-sm">L. WASH</text>
-  <rect id="room-gwash" class="utility" x="792" y="1042" width="90" height="42" />
-  <text x="837" y="1067" class="label-sm">G. WASH</text>
-
-  <!-- ======================================================= -->
-  <!-- PORCH (bottom fan / apex) -->
-  <!-- ======================================================= -->
-  <path id="porch" class="room" d="M420,1040 L580,1040 L560,1090 Q500,1140 440,1090 Z" />
-  <text x="500" y="1085" class="label">PORCH</text>
-  <text x="500" y="1100" class="label-sm">MAIN ENTRANCE</text>
-
-  <!-- ======================================================= -->
-  <!-- NAVIGATION GRAPH (doorway / junction nodes for pathfinding) -->
-  <!-- ======================================================= -->
-  <g id="nav-graph">
-    <!-- corridor spine edges -->
-    <path class="navEdge" d="M500,1090 L500,830 L500,730 L500,660 L500,470 L500,415 L500,345 L500,290 L500,150 L500,105" />
-    <!-- left wing branches -->
-    <path class="navEdge" d="M500,730 L370,730 L235,730 L235,830 L235,930 L235,985" />
-    <path class="navEdge" d="M500,660 L322,660 L322,587 L322,525" />
-    <path class="navEdge" d="M500,415 L330,340 L185,363" />
-    <path class="navEdge" d="M500,290 L330,290 L200,215" />
-    <!-- right wing branches -->
-    <path class="navEdge" d="M500,730 L630,730 L765,730 L765,832 L765,930" />
-    <path class="navEdge" d="M500,660 L677,660 L677,587 L677,525" />
-    <path class="navEdge" d="M500,415 L670,340 L815,363" />
-    <path class="navEdge" d="M500,290 L670,290 L810,215" />
-    <!-- stairs / core connectors -->
-    <path class="navEdge" d="M500,690 L270,690 L220,690" />
-    <path class="navEdge" d="M500,690 L730,690 L780,690" />
-
-    <!-- nodes -->
-    <circle class="navNode" cx="500" cy="1090" r="7" id="node-entrance" />
-    <text x="500" y="1112" class="navLabel">ENTRY</text>
-
-    <circle class="navNode" cx="500" cy="785" r="6" id="node-main-stair" />
-    <text x="500" y="805" class="navLabel">STAIR CORE</text>
-
-    <circle class="navNode" cx="500" cy="690" r="6" id="node-guests-waiting" />
-    <circle class="navNode" cx="500" cy="562" r="6" id="node-prayer-hall" />
-    <circle class="navNode" cx="500" cy="384" r="6" id="node-store" />
-    <circle class="navNode" cx="500" cy="290" r="6" id="node-seminar-hall" />
-    <circle class="navNode" cx="500" cy="105" r="6" id="node-stage" />
-
-    <circle class="navNode" cx="235" cy="985" r="5" id="node-room-001" />
-    <circle class="navNode" cx="235" cy="830" r="5" id="node-room-002" />
-    <circle class="navNode" cx="235" cy="730" r="5" id="node-room-003" />
-    <circle class="navNode" cx="322" cy="525" r="5" id="node-lift-left" />
-    <circle class="navNode" cx="220" cy="690" r="5" id="node-stair-left" />
-    <circle class="navNode" cx="185" cy="363" r="5" id="node-room-007" />
-    <circle class="navNode" cx="200" cy="215" r="5" id="node-gd-pi-cluster" />
-
-    <circle class="navNode" cx="765" cy="930" r="5" id="node-room-018" />
-    <circle class="navNode" cx="765" cy="832" r="5" id="node-room-017" />
-    <circle class="navNode" cx="677" cy="525" r="5" id="node-lift-right" />
-    <circle class="navNode" cx="780" cy="690" r="5" id="node-stair-right" />
-    <circle class="navNode" cx="815" cy="363" r="5" id="node-room-013" />
-    <circle class="navNode" cx="810" cy="215" r="5" id="node-room-012" />
+  <g id="rooms">
+    <polygon id="room-008-gd-pi" class="room" data-room="008" data-name="Room for GD and PI" points="61.8,264.8 173.8,175.2 297,304 171,369.8"><title>008 Room for GD and PI</title></polygon>
+    <polygon id="room-007-placement-control" class="room" data-room="007" data-name="Placement Control Room" points="54.8,462.2 171,369.8 311,495.8 213,588.2"><title>007 Placement Control Room</title></polygon>
+    <polygon id="room-012-civil-seminar" class="room" data-room="012" data-name="Civil Seminar Hall" points="943.8,264.8 831.8,175.2 708.6,304 834.6,369.8"><title>012 Civil Seminar Hall</title></polygon>
+    <polygon id="room-013-valuation-camp" class="room" data-room="013" data-name="Valuation Camp KTU" points="950.8,462.2 834.6,369.8 694.6,495.8 792.6,588.2"><title>013 Valuation Camp KTU</title></polygon>
+    <polygon id="room-006-electrical" class="room" data-room="006" data-name="Electrical Circuit Room" points="248,654 248,591 297,560.2 360,602.2 360,654"><title>006 Electrical Circuit Room</title></polygon>
+    <polygon id="room-014-ladies-waiting" class="room" data-room="014" data-name="Ladies Waiting Room" points="757.6,654 757.6,591 708.6,560.2 645.6,602.2 645.6,654"><title>014 Ladies Waiting Room</title></polygon>
+    <rect id="room-004-gents" class="room" data-room="004" data-name="Gents' Toilet" x="201.8" y="654" width="67.2" height="79.8"><title>004 Gents' Toilet</title></rect>
+    <rect id="room-005-gents-hc" class="room" data-room="005" data-name="Gents' Toilet (Handicapped)" x="269" y="654" width="44.8" height="44.8"><title>005 Gents' Toilet (Handicapped)</title></rect>
+    <rect id="room-015-ladies-hc" class="room" data-room="015" data-name="Ladies Toilet (Handicapped)" x="691.8" y="654" width="44.8" height="44.8"><title>015 Ladies Toilet (Handicapped)</title></rect>
+    <rect id="room-016-ladies" class="room" data-room="016" data-name="Ladies Toilet" x="736.6" y="654" width="134.4" height="79.8"><title>016 Ladies Toilet</title></rect>
+    <polygon id="room-009-st-francis-hall" class="room" data-room="009" data-name="St. Francis Hall" points="318,220 409,159.8 596.6,159.8 687.6,220 645.6,332 599.4,381 599.4,565.8 406.2,565.8 406.2,381 360,332"><title>009 St. Francis Hall</title></polygon>
+    <rect id="room-011-prayer-hall" class="room" data-room="011" data-name="Prayer Hall" x="406.2" y="565.8" width="193.2" height="168"><title>011 Prayer Hall</title></rect>
+    <rect id="room-003-placement-cell" class="room" data-room="003" data-name="Placement Cell" x="210.2" y="798.2" width="217" height="107.8"><title>003 Placement Cell</title></rect>
+    <rect id="room-002-medicare" class="room" data-room="002" data-name="Medicare" x="210.2" y="906" width="217" height="63"><title>002 Medicare</title></rect>
+    <rect id="room-001-managers-room" class="room" data-room="001" data-name="Manager's Room" x="210.2" y="969" width="217" height="142.8"><title>001 Manager's Room</title></rect>
+    <rect id="room-017-visitors-dining" class="room" data-room="017" data-name="Visitors' Dining Room" x="612" y="798.2" width="112" height="72.8"><title>017 Visitors' Dining Room</title></rect>
+    <polygon id="room-018-canteen" class="room" data-room="018" data-name="Canteen" points="612,871 724,871 724,798.2 871,798.2 871,1153.8 612,1153.8"><title>018 Canteen</title></polygon>
+    <polygon id="court-west" class="outdoor" data-type="outdoor" points="298.4,473.4 360,339 360,465"><title>Court</title></polygon>
+    <polygon id="court-east" class="outdoor" data-type="outdoor" points="707.2,473.4 645.6,339 645.6,465"><title>Court</title></polygon>
+    <rect id="veranda-west" class="outdoor" data-type="outdoor" x="171" y="798.2" width="39.2" height="313.6"></rect>
+    <rect id="porch" class="outdoor" data-type="outdoor" x="427.2" y="1055.8" width="184.8" height="56"><title>Porch</title></rect>
+    <polygon id="balcony-nw" class="outdoor" data-type="outdoor" points="213,588.2 248,591 248,654 201.8,654"></polygon>
+    <polygon id="balcony-ne" class="outdoor" data-type="outdoor" points="792.6,588.2 757.6,591 757.6,654 871,654"></polygon>
   </g>
 
-  <!-- ============ LEGEND ============ -->
-  <g id="legend" transform="translate(40, 1150)">
-    <rect x="0" y="0" width="14" height="14" class="room" />
-    <text x="20" y="11" class="label-sm" text-anchor="start">Room</text>
+  <g id="stairs-lifts">
+    <rect id="stairs-south" class="stairs" data-type="stairs" x="477.6" y="798.2" width="70" height="152.6"><title>South Stairs</title></rect>
+    <rect id="stairs-west" class="stairs" data-type="stairs" x="227" y="747.8" width="119" height="42"><title>West Stairs</title></rect>
+    <rect id="stairs-east" class="stairs" data-type="stairs" x="733.8" y="747.8" width="116.2" height="42"><title>East Stairs</title></rect>
+    <polygon id="stairs-terrace" class="stairs" data-type="stairs" points="413.2,1111.8 612,1111.8 406.2,1302.2"><title>Porch / Terrace Steps</title></polygon>
+    <polygon id="stairs-nw" class="stairs" data-type="stairs" points="262,241 315.2,257.8 340.4,308.2 295.6,294.2"><title>North-west Stairs</title></polygon>
+    <polygon id="stairs-ne" class="stairs" data-type="stairs" points="743.6,241 690.4,257.8 665.2,308.2 710,294.2"><title>North-east Stairs</title></polygon>
+    <g id="lift-east" data-type="lift"><rect class="lift" x="645.6" y="682" width="46.2" height="51.8"/><polygon class="icon" points="668.7,689.3 658.5,703.8 678.9,703.8"/><polygon class="icon" points="668.7,726.5 658.5,712 678.9,712"/><title>Lift</title></g>
+    <g id="lift-west" data-type="lift"><rect class="lift" x="313.8" y="682" width="46.2" height="51.8"/><polygon class="icon" points="336.9,689.3 326.7,703.8 347.1,703.8"/><polygon class="icon" points="336.9,726.5 326.7,712 347.1,712"/><title>Lift</title></g>
+  </g>
 
-    <rect x="0" y="20" width="14" height="14" class="utility" />
-    <text x="20" y="31" class="label-sm" text-anchor="start">Restroom / Utility</text>
+  <g id="walls">
+    <path id="wall-outer" d="M413.2,1111.8 L171,1111.8 L171,733.8 L201.8,733.8 L201.8,654 L213,588.2 L54.8,462.2 L171,369.8 L61.8,264.8 L173.8,175.2 L318,220 L409,159.8 L596.6,159.8 L687.6,220 L831.8,175.2 L943.8,264.8 L834.6,369.8 L950.8,462.2 L792.6,588.2 L871,654 L871,1153.8 L612,1153.8 L612,1111.8"/>
+  </g>
 
-    <rect x="0" y="40" width="14" height="14" class="core" />
-    <text x="20" y="51" class="label-sm" text-anchor="start">Stair / Lift core</text>
+  <g id="labels">
+    <text id="label-008" x="176.6" y="278.8"><tspan class="num" x="176.6" dy="-9">008</tspan><tspan class="name" x="176.6" dy="20">GD &amp; PI ROOMS</tspan></text>
+    <text id="label-007" x="187.8" y="479"><tspan class="num" x="187.8" dy="-15">007</tspan><tspan class="name" x="187.8" dy="20">PLACEMENT</tspan><tspan class="name" x="187.8" dy="12">CONTROL ROOM</tspan></text>
+    <text id="label-012" x="829" y="278.8"><tspan class="num" x="829" dy="-15">012</tspan><tspan class="name" x="829" dy="20">CIVIL SEMINAR</tspan><tspan class="name" x="829" dy="12">HALL</tspan></text>
+    <text id="label-013" x="817.8" y="479"><tspan class="num" x="817.8" dy="-15">013</tspan><tspan class="name" x="817.8" dy="20">VALUATION</tspan><tspan class="name" x="817.8" dy="12">CAMP KTU</tspan></text>
+    <text id="label-006" x="304" y="621.8"><tspan class="num-sm" x="304" dy="-7">006</tspan><tspan class="name" x="304" dy="14">ELECTRICAL</tspan></text>
+    <text id="label-014" x="701.6" y="621.8"><tspan class="num-sm" x="701.6" dy="-7">014</tspan><tspan class="name" x="701.6" dy="14">LADIES WAITING</tspan></text>
+    <text id="label-004" x="235.4" y="693.2"><tspan class="num-sm" x="235.4" dy="-7">004</tspan><tspan class="name" x="235.4" dy="14">GENTS</tspan></text>
+    <text id="label-005" class="num-sm" x="291.4" y="676.4">005</text>
+    <text id="label-015" class="num-sm" x="714.2" y="676.4">015</text>
+    <text id="label-016" x="803.8" y="693.2"><tspan class="num-sm" x="803.8" dy="-7">016</tspan><tspan class="name" x="803.8" dy="14">LADIES TOILET</tspan></text>
+    <text id="label-009" x="502.8" y="283"><tspan class="num" x="502.8" dy="-9">009</tspan><tspan class="name" x="502.8" dy="20">ST. FRANCIS HALL</tspan></text>
+    <text id="label-011" x="502.8" y="649.8"><tspan class="num" x="502.8" dy="-9">011</tspan><tspan class="name" x="502.8" dy="20">PRAYER HALL</tspan></text>
+    <text id="label-003" x="318" y="851.4"><tspan class="num" x="318" dy="-9">003</tspan><tspan class="name" x="318" dy="20">PLACEMENT CELL</tspan></text>
+    <text id="label-002" x="318" y="938.2"><tspan class="num" x="318" dy="-9">002</tspan><tspan class="name" x="318" dy="20">MEDICARE</tspan></text>
+    <text id="label-001" x="318" y="1040.4"><tspan class="num" x="318" dy="-9">001</tspan><tspan class="name" x="318" dy="20">MANAGER'S ROOM</tspan></text>
+    <text id="label-017" x="668" y="834.6"><tspan class="num" x="668" dy="-9">017</tspan><tspan class="name" x="668" dy="20">VISITORS' DINING</tspan></text>
+    <text id="label-018" x="742.2" y="1011"><tspan class="num" x="742.2" dy="-9">018</tspan><tspan class="name" x="742.2" dy="20">CANTEEN</tspan></text>
+    <text id="label-stage" class="misc" x="502.8" y="193.4">STAGE</text>
+    <text id="label-guests-waiting" class="misc" x="502.8" y="766">GUESTS WAITING AREA</text>
+    <text id="label-porch" class="misc" x="519.6" y="1083.8">PORCH</text>
+  </g>
 
-    <line x1="0" y1="66" x2="14" y2="66" class="navEdge" />
-    <text x="20" y="70" class="label-sm" text-anchor="start">Nav. path</text>
-
-    <circle cx="7" cy="86" r="5" class="navNode" />
-    <text x="20" y="90" class="label-sm" text-anchor="start">Nav. node</text>
+  <g id="brand">
+    <rect class="band" x="0" y="0" width="1000" height="96"/>
+    <text class="serif" x="40" y="38" style="font-size:38px;font-weight:700;letter-spacing:5px">SJCET</text>
+    <text class="serif" x="42" y="72" style="font-size:14px;letter-spacing:9px">PALAI</text>
+    <line x1="220" y1="22" x2="220" y2="74" stroke="#fff" stroke-opacity=".55" stroke-width="1.5"/>
+    <text class="serif" x="245" y="38" style="font-size:19px;font-weight:600">St. Joseph's College of Engineering &amp; Technology</text>
+    <text class="sans" x="245" y="64" style="font-size:13px;letter-spacing:1.5px;opacity:.9">PALAI (AUTONOMOUS)  ·  INDOOR NAVIGATION</text>
+    <rect class="band" x="250" y="1338" width="500" height="54" rx="10"/>
+    <text class="sans" x="500" y="1358" text-anchor="middle" style="font-size:22px;font-weight:700">St. Francis Block</text>
+    <text class="sans" x="500" y="1380" text-anchor="middle" style="font-size:15px">Ground Floor Layout</text>
+  </g>
+  <g id="legend">
+    <rect x="245" y="1310" width="16" height="12" fill="#F7FAFC" stroke="#CBD5E0" stroke-width="1.5"/><text x="267" y="1316">Room</text>
+    <rect x="340" y="1310" width="16" height="12" fill="#EDF2F7" stroke="#CBD5E0"/><text x="362" y="1316">Corridor / court</text>
+    <rect x="500" y="1310" width="16" height="12" fill="#E2E8F0" stroke="#2D3748"/><text x="522" y="1316">Stairs / lift</text>
+    <rect x="620" y="1310" width="16" height="12" fill="#EAE4D8" stroke="#B8AE9C"/><text x="642" y="1316">Outdoor</text>
+    <rect x="720" y="1310" width="16" height="12" fill="#7A1C1C"/><text x="742" y="1316">Selected / route</text>
   </g>
 </svg>

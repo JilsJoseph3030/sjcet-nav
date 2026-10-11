@@ -19,13 +19,102 @@
   }
 }
 
+/* Architectural Map Canvas Dot Grid Pattern */
+.map-canvas-grid {
+  background-color: #f1f4f8;
+  background-image: 
+    radial-gradient(#cbd5e1 1.2px, transparent 1.2px),
+    radial-gradient(#e2e8f0 1.2px, #f1f4f8 1.2px);
+  background-size: 24px 24px;
+  background-position: 0 0, 12px 12px;
+}
+
+/* Clean up SVG baked-in poster banners so it looks like an active digital navigation map */
+.modern-map-svg svg {
+  background: transparent !important;
+  filter: drop-shadow(0 12px 30px rgba(15, 23, 42, 0.10));
+}
+
+/* Hide static print poster elements baked into the SVGs */
+.modern-map-svg #brand,
+.modern-map-svg #legend {
+  display: none !important;
+}
+
+/* Architectural building walls and room styling */
+.modern-map-svg #corridors .base {
+  fill: #edf2f7 !important;
+  opacity: 0.95;
+}
+
+.modern-map-svg #corridors .seg {
+  fill: #f8fafc !important;
+  stroke: #e2e8f0 !important;
+  stroke-width: 1px !important;
+  transition: fill 0.2s ease;
+}
+
+.modern-map-svg #corridors .seg:hover {
+  fill: #e2e8f0 !important;
+}
+
+/* Interactive Room Polygons */
+.modern-map-svg [id^="room-"] {
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modern-map-svg [id^="room-"]:hover {
+  fill: #fef3c7 !important;
+  stroke: #c5a059 !important;
+  stroke-width: 2.5px !important;
+  filter: drop-shadow(0 4px 8px rgba(197, 160, 89, 0.35));
+}
+
+.modern-map-svg #walls path {
+  stroke: #1e293b !important;
+  stroke-width: 5px !important;
+  stroke-linecap: round !important;
+  stroke-linejoin: round !important;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
+}
+
+.modern-map-svg #labels text {
+  user-select: none;
+  pointer-events: none;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  letter-spacing: 0.02em;
+}
+
+.modern-map-svg #labels .num {
+  font-weight: 800 !important;
+  fill: #1e293b !important;
+}
+
+.modern-map-svg #labels .name {
+  font-weight: 600 !important;
+  fill: #475569 !important;
+}
+
+/* Pulsing User Location Marker */
+.user-pulse-marker {
+  animation: user-ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes user-ping {
+  75%, 100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
+
 .navigating-glow {
   animation: pulse-glow 1.5s infinite alternate;
 }
 
 @keyframes pulse-glow {
-  0% { filter: drop-shadow(0 0 5px #c5a059); }
-  100% { filter: drop-shadow(0 0 20px #c5a059); fill: #d4af68; }
+  0% { filter: drop-shadow(0 0 6px #c5a059); }
+  100% { filter: drop-shadow(0 0 24px #c5a059); fill: #d4af68; }
 }
 
 .active-nav-path {
@@ -36,7 +125,7 @@
   stroke-dasharray: 8 4 !important;
   animation: march 0.8s linear infinite;
   opacity: 1 !important;
-  filter: drop-shadow(0 0 3px rgba(197, 160, 89, 0.6));
+  filter: drop-shadow(0 0 6px rgba(197, 160, 89, 0.8));
 }
 
 @keyframes march {

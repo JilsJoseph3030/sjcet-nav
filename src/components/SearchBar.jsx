@@ -1,7 +1,15 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Search, X, MapPin } from 'lucide-react';
+import { Search, X, MapPin, Accessibility } from 'lucide-react';
 
-export default function SearchBar({ placeholder, initialValue, onSelect, onClear, icon: Icon = Search, graphData }) {
+export default function SearchBar({ 
+  placeholder, 
+  initialValue, 
+  onSelect, 
+  onClear, 
+  icon: Icon = Search, 
+  graphData,
+  categoryFilter = 'all'
+}) {
   const [query, setQuery] = useState(initialValue || '');
   const [results, setResults] = useState([]);
   const [isFocused, setIsFocused] = useState(false);
@@ -17,12 +25,14 @@ export default function SearchBar({ placeholder, initialValue, onSelect, onClear
     if (graphData) {
       Object.keys(graphData).forEach(floor => {
         Object.keys(graphData[floor].nodes).forEach(nodeId => {
-          const nodeName = graphData[floor].nodes[nodeId].name;
-          // Skip utility/hidden nodes if they don't have a formal name, or fallback to ID
+          const node = graphData[floor].nodes[nodeId];
+          const nodeName = node.name;
           items.push({
             id: nodeId,
             name: nodeName || nodeId.replace('room-', '').replace(/-/g, ' ').toUpperCase(),
             floor: floor,
+            category: node.category || 'classroom',
+            accessible: node.accessible !== false,
             floorLabel: floor === 'ground' ? 'Ground Floor' : floor.charAt(0).toUpperCase() + floor.slice(1) + ' Floor'
           });
         });
@@ -32,17 +42,30 @@ export default function SearchBar({ placeholder, initialValue, onSelect, onClear
   }, [graphData]);
 
   useEffect(() => {
+    let filtered = searchItems;
+
+    // Apply category filter if active
+    if (categoryFilter && categoryFilter !== 'all') {
+      filtered = filtered.filter(item => item.category === categoryFilter);
+    }
+
     if (query.trim() === '' || query === initialValue) {
-      setResults([]);
+      // When category filter is active, show matching category items even with empty query!
+      if (categoryFilter && categoryFilter !== 'all' && isFocused) {
+        setResults(filtered.slice(0, 8));
+      } else {
+        setResults([]);
+      }
       return;
     }
+
     const lowerQuery = query.toLowerCase();
-    const filtered = searchItems.filter(item => 
+    const searched = filtered.filter(item => 
       (item.name || '').toLowerCase().includes(lowerQuery) || 
       (item.id || '').toLowerCase().includes(lowerQuery)
     );
-    setResults(filtered);
-  }, [query, initialValue, searchItems]);
+    setResults(searched.slice(0, 10));
+  }, [query, initialValue, searchItems, categoryFilter, isFocused]);
 
   // Handle outside click to close dropdown
   useEffect(() => {
@@ -64,56 +87,69 @@ export default function SearchBar({ placeholder, initialValue, onSelect, onClear
 
   const handleClear = () => {
     setQuery('');
+    setResults([]);
     if (onClear) onClear();
   };
 
   return (
-    <div className="relative w-full mb-3" ref={dropdownRef}>
-      <div className={`flex items-center bg-gray-100 rounded-2xl px-4 py-3 transition-all duration-300 border-2 ${isFocused ? 'border-sjcet-maroon bg-white shadow-md' : 'border-transparent'}`}>
-        <Icon className="w-5 h-5 text-gray-400 mr-2 flex-shrink-0" />
-        <input
+    <div className="relative w-full" ref={dropdownRef}>
+      <div className={`relative flex items-center bg-white rounded-2xl border transition-all duration-200 shadow-sm ${
+        isFocused ? 'border-sjcet-maroon ring-2 ring-sjcet-maroon/15 shadow-md' : 'border-slate-200 hover:border-slate-300'
+      }`}>
+        <div className="pl-4 text-slate-400 flex items-center justify-center">
+          <Icon className="w-5 h-5 text-sjcet-maroon" />
+        </div>
+        
+        <input 
           type="text"
-          className="flex-1 bg-transparent border-none outline-none text-gray-800 placeholder-gray-500 text-[15px]"
-          placeholder={placeholder || "Search..."}
+          className="w-full py-3.5 pl-3 pr-10 text-sm font-semibold text-slate-800 placeholder-slate-400 bg-transparent rounded-2xl focus:outline-none"
+          placeholder={placeholder}
           value={query}
-          onChange={(e) => {
-            setQuery(e.target.value);
-            if (e.target.value === '' && onClear) onClear();
-          }}
+          onChange={(e) => setQuery(e.target.value)}
           onFocus={() => setIsFocused(true)}
         />
+
         {query && (
           <button 
+            type="button"
             onClick={handleClear}
-            className="ml-2 p-1 bg-gray-200 rounded-full hover:bg-gray-300 active:scale-95 transition-all"
+            className="absolute right-3 p-1 rounded-full text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition-colors"
           >
-            <X className="w-4 h-4 text-gray-600" />
+            <X className="w-4 h-4" />
           </button>
         )}
       </div>
 
       {/* Autocomplete Dropdown */}
       {isFocused && results.length > 0 && (
-        <div className="absolute top-full left-0 w-full mt-2 bg-white rounded-2xl shadow-xl border border-gray-100 max-h-60 overflow-y-auto z-50 py-2 animate-in fade-in slide-in-from-top-2">
-          {results.map((item, idx) => (
-            <button
-              key={`${item.id}-${idx}`}
+        <div className="absolute left-0 right-0 top-full mt-2 bg-white/95 backdrop-blur-md rounded-2xl shadow-xl border border-slate-100 max-h-60 overflow-y-auto z-50 py-1.5 divide-y divide-slate-50 animate-in fade-in slide-in-from-top-2 duration-150">
+          {results.map((item) => (
+            <div 
+              key={`${item.floor}-${item.id}`}
               onClick={() => handleSelect(item)}
-              className="w-full text-left px-5 py-3 hover:bg-gray-50 flex flex-col transition-colors border-b border-gray-50 last:border-0"
+              className="px-4 py-3 hover:bg-slate-50/80 cursor-pointer flex items-center justify-between transition-colors group"
             >
-              <span className="font-bold text-gray-800 text-[15px]">{item.name}</span>
-              <span className="text-xs text-gray-500 flex items-center mt-1">
-                <MapPin className="w-3 h-3 mr-1" />
-                {item.floorLabel}
-              </span>
-            </button>
+              <div className="flex items-center space-x-3">
+                <div className="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-sjcet-maroon group-hover:bg-sjcet-maroon group-hover:text-white transition-colors">
+                  <MapPin className="w-4 h-4" />
+                </div>
+                <div>
+                  <p className="text-sm font-bold text-slate-800 group-hover:text-sjcet-maroon transition-colors">
+                    {item.name}
+                  </p>
+                  <p className="text-xs text-slate-400 font-medium">
+                    {item.floorLabel}
+                  </p>
+                </div>
+              </div>
+
+              {item.accessible && (
+                <span title="Wheelchair accessible" className="text-emerald-600 bg-emerald-50 p-1 rounded-full">
+                  <Accessibility className="w-3.5 h-3.5" />
+                </span>
+              )}
+            </div>
           ))}
-        </div>
-      )}
-      
-      {isFocused && query && query !== initialValue && results.length === 0 && (
-        <div className="absolute top-full left-0 w-full mt-2 bg-white rounded-2xl shadow-xl border border-gray-100 p-4 text-center z-50">
-          <p className="text-sm text-gray-500">No matching locations found.</p>
         </div>
       )}
     </div>

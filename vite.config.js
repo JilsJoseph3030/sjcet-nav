@@ -10,9 +10,6 @@ export default defineConfig({
       output: {
         manualChunks(id) {
           if (id.includes('node_modules')) {
-            if (id.includes('@supabase/supabase-js')) {
-              return 'supabase';
-            }
             return 'vendor';
           }
         }
