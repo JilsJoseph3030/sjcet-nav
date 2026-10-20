@@ -4,7 +4,9 @@
 
 @layer base {
   body {
-    @apply bg-sjcet-bg text-gray-900 font-sans;
+    background-color: #f8f9fa;
+    color: #111827;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     overscroll-behavior-y: none;
   }
 }
@@ -19,7 +21,7 @@
   }
 }
 
-/* Architectural Map Canvas Dot Grid Pattern */
+/* Light Architectural Map Canvas Dot Grid Pattern */
 .map-canvas-grid {
   background-color: #f1f4f8;
   background-image: 
@@ -29,7 +31,7 @@
   background-position: 0 0, 12px 12px;
 }
 
-/* Clean up SVG baked-in poster banners so it looks like an active digital navigation map */
+/* Clean up SVG baked-in poster banners */
 .modern-map-svg svg {
   background: transparent !important;
   filter: drop-shadow(0 12px 30px rgba(15, 23, 42, 0.10));
@@ -41,7 +43,7 @@
   display: none !important;
 }
 
-/* Architectural building walls and room styling */
+/* Architectural building corridors and walls */
 .modern-map-svg #corridors .base {
   fill: #edf2f7 !important;
   opacity: 0.95;
@@ -58,8 +60,10 @@
   fill: #e2e8f0 !important;
 }
 
-/* Interactive Room Polygons */
-.modern-map-svg [id^="room-"] {
+/* Interactive Room & Stair Polygons */
+.modern-map-svg [id^="room-"],
+.modern-map-svg [id^="lift-"],
+.modern-map-svg [id^="stairs-"] {
   cursor: pointer;
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -69,6 +73,12 @@
   stroke: #c5a059 !important;
   stroke-width: 2.5px !important;
   filter: drop-shadow(0 4px 8px rgba(197, 160, 89, 0.35));
+}
+
+.modern-map-svg [id^="stairs-"]:hover {
+  fill: #fef3c7 !important;
+  stroke: #c5a059 !important;
+  stroke-width: 2px !important;
 }
 
 .modern-map-svg #walls path {
@@ -96,7 +106,7 @@
   fill: #475569 !important;
 }
 
-/* Pulsing User Location Marker */
+/* Pulsing User / Room Pin Marker */
 .user-pulse-marker {
   animation: user-ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
 }
@@ -108,6 +118,35 @@
   }
 }
 
+/* Amenity Highlight Glow on Map */
+.amenity-highlight {
+  fill: #fef08a !important;
+  stroke: #c5a059 !important;
+  stroke-width: 3.5px !important;
+  animation: amenity-pulse 1.8s ease-in-out infinite alternate !important;
+}
+
+@keyframes amenity-pulse {
+  0% {
+    fill: #fef08a;
+    filter: drop-shadow(0 0 4px rgba(197, 160, 89, 0.5));
+  }
+  100% {
+    fill: #fde047;
+    filter: drop-shadow(0 0 16px rgba(197, 160, 89, 0.9));
+  }
+}
+
+.amenity-pulse-badge {
+  animation: badge-ping 1.6s cubic-bezier(0, 0, 0.2, 1) infinite;
+  transform-origin: center;
+}
+
+@keyframes badge-ping {
+  0%, 100% { opacity: 0.8; transform: scale(0.9); }
+  50% { opacity: 0.2; transform: scale(1.5); }
+}
+
 .navigating-glow {
   animation: pulse-glow 1.5s infinite alternate;
 }
@@ -115,21 +154,4 @@
 @keyframes pulse-glow {
   0% { filter: drop-shadow(0 0 6px #c5a059); }
   100% { filter: drop-shadow(0 0 24px #c5a059); fill: #d4af68; }
-}
-
-.active-nav-path {
-  stroke: #c5a059 !important;
-  stroke-width: 6 !important;
-  stroke-linecap: round !important;
-  stroke-linejoin: round !important;
-  stroke-dasharray: 8 4 !important;
-  animation: march 0.8s linear infinite;
-  opacity: 1 !important;
-  filter: drop-shadow(0 0 6px rgba(197, 160, 89, 0.8));
-}
-
-@keyframes march {
-  to {
-    stroke-dashoffset: -24;
-  }
 }

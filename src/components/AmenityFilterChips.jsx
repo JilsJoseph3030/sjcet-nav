@@ -6,7 +6,6 @@ import {
   GraduationCap, 
   Building2, 
   ChevronsUp, 
-  Sparkles,
   Bath
 } from 'lucide-react';
 
@@ -17,7 +16,7 @@ const CATEGORIES = [
   { id: 'library', label: 'Libraries', icon: BookOpen },
   { id: 'classroom', label: 'Classrooms', icon: GraduationCap },
   { id: 'admin', label: 'Offices & Admin', icon: Building2 },
-  { id: 'lift', label: 'Elevators', icon: ChevronsUp }
+  { id: 'lift', label: 'Elevators & Stairs', icon: ChevronsUp }
 ];
 
 export default function AmenityFilterChips({ activeCategory, onSelectCategory }) {
